@@ -20,6 +20,20 @@
     .PageNumberPosition = int.from_bytes(b'none','big')`로 제거(리플로우용 권장사항).
 - **InDesign은 스레드로 연결되지 않은 독립 스토리(표지/판권/영문표지/저자소개 등)를
   본문 뒤에 순서 없이 던져버린다.** 후처리에서 반드시 내용 기반으로 위치를 재배치해야 한다.
+- **[2026-10-01 중요 발견] `BreakDocument`의 `ParagraphStyleName` 매칭은 문서 최상위
+  (그룹 밖) 단락 스타일만 인식하고, `ParagraphStyleGroup` 안에 중첩된 동일 이름의 스타일은
+  무시한다.** 다른 프로젝트에서 스타일이 통째로 복사돼 들어온 문서(예: 스타일 그룹
+  "마틴 루터의 갈라디아서 강의와 복음 V" 안에 같은 이름 "장 제목"이 중복 존재)에서, 실제
+  장(章) 제목 문단들이 그룹 안의 스타일을 쓰고 있으면 `BreakDocument=True`를 줘도 전혀
+  분할이 안 된다(전체가 파일 1개로 나옴). **진단 순서**: (1) `doc.ParagraphStyleGroups`를
+  순회해 동일 이름의 중복 스타일이 있는지 확인 (2) `doc.Stories.Item(1).Paragraphs`를
+  **인덱스 접근**(`.Item(i)`, `for i in range(1,n+1)`)으로 순회해 실제 장 제목 텍스트가
+  어느 스타일 객체(`.AppliedParagraphStyle`)를 쓰는지 확인 — **Python `for p in
+  collection:` 형태의 이터레이터는 대형 COM 컬렉션에서 항목을 누락시키는 버그가 있으므로
+  반드시 인덱스 접근으로 재확인할 것** (3) 실제 장 제목이 최상위 스타일을 안 쓰고 있으면,
+  `doc.ParagraphStyles.Item('장 제목')`(최상위) 객체를 가져와 각 장 제목 문단에
+  `p.AppliedParagraphStyle = top_style`로 재적용한 뒤 export — 이렇게 하면 즉시 정상
+  분할된다. (실제 사례: "스펄전의 아가서의 복음이야기 1" — 10장 전부 정상 복구.)
 - 문단 클래스에 스타일을 줘도 InDesign이 실제 텍스트를 `<span class="CharOverride-N">`
   으로 감싸서 그 span이 폰트를 재정의한다 → 반드시 `.클래스, .클래스 span { ... !important }`
   형태로 강제해야 실제 적용된다.
