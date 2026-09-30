@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ONIXMessage release="3.0" xmlns="http://ns.editeur.org/onix/3.0/reference">
+  <Header>
+    <Sender>
+      <SenderName>나무와열매</SenderName>
+    </Sender>
+    <SentDateTime>20261019T0000</SentDateTime>
+  </Header>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-PS41-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736548</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 시편의 복음이야기 41</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>316</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 시편 설교문은 총 439편이다. 반면, 과거 설교전집에는 143편만이 실려 있다. 본 설교집에 296편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 시편의 복음이야기(41)이다.
+
+[목차]
+내용
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+
+I  여호와의 영원한 안식  23
+II  높임 받으신 하나님의 왕  46
+III  생소하지만 은혜로운 선택  71
+IV  노래, 위로, 설교, 그리고 부르심  96
+V  놀라운 일을 행하시는 하나님  125
+VI  시혼과 옥, 또는 구체적으로 베푸신 자비  159
+VII  마지막 인구조사  192
+VIII  공개적인 찬양과 공적인 신앙 고백  222
+IX  주의 길에서 노래함  250
+X  완전하게 하실 것을 믿는 믿음  284</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736548.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-PS42-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736562</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 시편의 복음이야기 42</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>263</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 시편 설교문은 총 439편이다. 반면, 과거 설교전집에는 143편만이 실려 있다. 본 설교집에 296편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 시편의 복음이야기(42)이다.
+
+[목차]
+내용
+
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+I  하나님의 생각과 우리 생각  23
+II  하나님에 대한 우리 생각  43
+III  영원한 길  66
+IV  다윗의 다섯 줄 하프  95
+V  중보기도  119
+VI  동굴에서 드린 다윗의 기도  148
+VII  주 안에 숨나이다  172
+VIII  기도 배움의 자리  195
+IX  행복에 대한 그림들  216
+X  매일 찬양의 행복한 의무  233</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736562.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-PS43-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736586</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 시편의 복음이야기 43</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>312</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 시편 설교문은 총 439편이다. 반면, 과거 설교전집에는 143편만이 실려 있다. 본 설교집에 296편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 시편의 복음이야기(43)이다.
+
+[목차]
+내용
+
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+I  형언할 수 없는 것을 말하는 방식  23
+II  풍성한 찬양 원리와 합당함  53
+III  성도들에 관하여  86
+IV  그리스도인의 대화  118
+V  자유케하시는 하나님  144
+VI  하나님의 유명한 칭호들  177
+VII  버림받은 자들을 위한 기쁜 소식  199
+VIII  상처 입은 자를 위한 치유  230
+IX  그리스도의 병원  256
+X  까마귀 새끼의 울음  282</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736586.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-PS44-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736609</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 시편의 복음이야기 44</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>238</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 시편 설교문은 총 439편이다. 반면, 과거 설교전집에는 143편만이 실려 있다. 본 설교집에 296편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 시편의 복음이야기(44)이다.
+
+[목차]
+내용
+
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+I  두려워하며 소망함  23
+II  국내 전도와 해외 선교의 번영  45
+III  매우 빠르게 달리는 말씀  73
+IV  서리와 해빙  105
+V  우리 왕, 우리 기쁨  136
+V  희년의 기쁨, 또는 자기들의 왕으로 말미암아 즐거워하는 성도들  164
+VII  영원히 아름답게  193
+VIII  할렐루야! 할렐루야!  215</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736609.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-PR01-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736623</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 잠언의 복음이야기 1</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>294</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 잠언 설교문은 총 43편이다. 반면, 과거 설교전집에는 15편만이 실려 있다. 본 설교집에 28편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 잠언의 복음이야기( 1 )이다.
+
+[목차]
+내용
+
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+I  굳게 붙잡으라  23
+II  위대한 저수지  51
+III  눈으로 똑바로 보라  77
+IV  마지막 일들  105
+V  죄의 줄에 매인 죄인들  133
+VI  경건한 부모의 자녀들에게 보내는 호소  161
+VII  말하는 책  182
+VIII  물을 주는 자도 물을 받으리라  214
+IX  곡식을 내놓지 않는 일  238
+X  영혼 구원  268</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736623.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-PR02-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736647</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 잠언의 복음이야기 2</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>319</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 잠언 설교문은 총 43편이다. 반면, 과거 설교전집에는 15편만이 실려 있다. 본 설교집에 28편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 잠언의 복음이야기(2)이다.
+
+[목차]
+내용
+
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+I  영혼을 얻는 자  23
+II  사람에게 알려지지 않은 사람  55
+III  사람의 행동이 자신에게 되돌아오는 방식  84
+IV  경건한 두려움과 그 복된 결과  114
+V  모든 것을 보시는 하나님  146
+VI  가시 울타리와 평탄한 길  174
+VII  건전하지 못한 영적 거래  202
+VIII  하나님을 신뢰하는 것이 참된 지혜이다  233
+IX  비길 데 없는 친구  260
+X 우리의 견고한 망대  288</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736647.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-PR03-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736661</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 잠언의 복음이야기 3</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>292</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 잠언 설교문은 총 43편이다. 반면, 과거 설교전집에는 15편만이 실려 있다. 본 설교집에 28편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 잠언의 복음이야기(3)이다.
+
+[목차]
+내용
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+I 교만과 겸손(Pride and Humility)  23
+II 상한 심령의 원인과 치유(The Cause and Cure of a Wounded Spirit)  48
+III 신실한 친구(A Faithful Friend)  75
+IV 사자 한 마리, 사자 두 마리, 사실 사자는 한 마리도 없다!(One Lion, Two Lions, No Lion at All!)  105
+V 하루 종일(All the Day Long) 136
+VI 세 가지 중요한 교훈(Three Important Precepts)  165
+VII 진리를 사라(Buying the Truth)  196
+VIII 마음: 하나님께 드리는 선물(The Heart-A Gift for God)  220
+IX 게으른 자의 농장(The Sluggard’s Farm)  243
+X 무너진 돌담(The Broken Fence) 273</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736661.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-PR04-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736685</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 잠언의 복음이야기 4</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>353</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 잠언 설교문은 총 43편이다. 반면, 과거 설교전집에는 15편만이 실려 있다. 본 설교집에 28편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 잠언의 복음이야기(4)이다.
+
+[목차]
+내용
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+I 좋은 소식(GOOD NEWS)  23
+II 내일(Tomorrow)  52
+III 낙심한 이들을 위한 격려(Cheer for Despondency)  80
+IV 영적 식욕(Spiritual Appetite)  108
+V 둥지를 떠도는 새(The Wandering Bird)  136
+VI 가장 좋은 친구(The Best Friend)  160
+VII 존귀를 얻는 길(The Way to Honor)  184
+VIII 존귀하게 되는 종(The Honored Servant)  212
+IX 올바른 종류의 두려움(The Right Kind of Fear)  237
+X 두 개의 옛 잠언(Two Ancient Proverbs)  265
+XI 겸손한 사람들을 위한 설교(A Homily for Humble Folks)  287
+XII 복음의 강장제(The Gospel Cordial)  316
+XIII 두 가지 덮음과 두 가지 결과(Two Coverings and Two Consequences)  335</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736685.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-EC01-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736708</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 전도서의 복음이야기</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>330</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 전도서 설교문은 총 12편이다. 반면, 과거 설교전집에는 7편만이 실려 있다. 본 설교집에 5편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 전도서의 복음이야기이다.
+
+[목차]
+내용
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+I “사랑할 때”(A Time to Love)  23
+II 알려진 것과 알려지지 않은 것(The Known and the Unknown)  42
+III 신자의 죽는 날이 태어난 날보다 낫다(The Believer’s Death Day Better Than His Birthday)  65
+IV 슬픔의 집과 잔칫집(The House of Mourning and the House of Feasting)  95
+V 설교자를 바라보며(An Observation of the Preacher)  121
+VI 왕의 말씀(The Word of a King)  142
+VII 악인의 생애와 장례와 묘비명(The Wicked Man’s Life, Funeral and Epitaph)  172
+VIII 다섯 가지 두려움(Five Fears)  195
+IX 국내 선교 설교(A Home Mission Sermon)  224
+X 박차(The Spur)  254
+XI 검은 구름과 밝은 복(Black Clouds and Bright Blessings)  283
+XII 바람 속에 씨를 뿌리고: 구름 아래서 거두다(Sowing in the Wind, Reaping Under Clouds)  309</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736708.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+  <Product>
+    <RecordReference>NAMUYEOLMAE-SS01-E</RecordReference>
+    <NotificationType>03</NotificationType>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9791124736722</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>EB</ProductForm>
+      <ProductFormDetail>E101</ProductFormDetail>
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>스펄전의 아가서의 복음이야기 1</TitleText>
+        </TitleElement>
+      </TitleDetail>
+      <Contributor>
+        <SequenceNumber>1</SequenceNumber>
+        <ContributorRole>A01</ContributorRole>
+        <PersonName>찰스 해돈 스펄전</PersonName>
+      </Contributor>
+      <Contributor>
+        <SequenceNumber>2</SequenceNumber>
+        <ContributorRole>B06</ContributorRole>
+        <PersonName>나무와열매 번역실</PersonName>
+      </Contributor>
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>kor</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>00</ExtentType>
+        <ExtentValue>273</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+      <Subject>
+        <SubjectSchemeIdentifier>10</SubjectSchemeIdentifier>
+        <SubjectCode>REL080000</SubjectCode>
+      </Subject>
+    </DescriptiveDetail>
+    <CollateralDetail>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>오래 전에 스펄전의 신구약 성경 설교전집이 보문사와 크리스찬 다이제스트등을 통해 출판되었다. 하지만, 본 설교집은 몇 가지 면에서 다른 특징을 지닌다. 첫째, 새로운 설교가 모두 실려 있다. 현재까지 발표된 스펄전의 전도서 설교문은 총 65편이다. 반면, 과거 설교전집에는 16편만이 실려 있다. 본 설교집에 49편의 설교가 새로 추가되었다. 둘째, 가독성을 좋게 하였다. 과거 설교집은 단락별로 너무 많은 문장으로 구성되었다. 반면, 본 설교집은 소설을 읽는 것처럼 편안히 읽도록 단락을 좀 더 세분화하였다. 셋째, 가급적 각 권당 설교를 10-13편 정도로 제한했다. 책이 두꺼울수록 읽는 데 지치기 쉽다. 넷째, 설교 원문에는 없는 성경 장절 표기를 대부분 삽입했으며, 필요한 경우, 현대 독자들의 이해 편의를 위해 당시 인물들의 출생과 사망연도와 약간의 해설을 추가했다. 다섯째, 현대인들이 누구나 이해하도록 12세 수준의 쉬운 번역 방식을 취했다.
+스펄전의 설교는 당시뿐만 아니라 오늘날에도 목회자들과 신학생 그리고 평신도들도 쉽게 이해할 수 있는 탁월한 설득 방식을 취하고 있다. 더불어 주석적, 영적 깊이도 충분히 갖추고 있기에 목회자들과 신학생들에게도 영적 성숙에 대한 상당한 인사이트를 제공한다. 본서는 스펄전이 복음의 관점으로 신구약 성경을 설교한 것들을 번역한 것이다. 제목은 스펄전의 아가서의 복음이야기(1)이다.
+
+[목차]
+내용
+스펄전(Charles Haddon Spurgeon)에게 배우는 위대한 복음 시리즈를 출간하면서  7
+I 포도주보다 나은 사랑(Better Than Wine)  23
+II 기뻐하며 기억함(Rejoicing and Remembering)  49
+III 그리스도의 사랑을 기억함(The Memory of Christ’s Love)  71
+IV 상쾌하게 하는 찬가(A Refreshing Canticle)  95
+V 지키지 못한 포도원-또는 소홀히 한 자신의 일(The Unkept Vineyard-Or, Personal Work Neglected)  124
+VI 자기 낮춤과 자기 성찰(Self-Humbling and Self-Searching)  144
+VII 예수님을 향한 사랑(Love to Jesus)  170
+VIII 사랑의 주님을 향한 교회의 사랑(The Church’s Love to Her Loving Lord)  201
+IX 선한 목자(The Good Shepherdess)  232
+X 향기로운 은혜들(Fragrant Graces)  262</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>15</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>최근 미국의 설문조사에서 기독교 역사상 최고의 설교가가 누구인가에 대한 질문에, 찰스 해돈 스펄전이 1등을 차지했다. 이것을 제외하더라도 그가 최고의 설교가들 중 한 명으로 늘 인정받아온 것은 그 누구도 부정할 수 없는 사실이다. 찰스 해돈 스펄전(Charles Haddon Spurgeon, 1834-1892)은 영국의 침례교 목사이자 설교자로, “설교의 황태자”(The Prince of Preachers)로 불린다. 19세에 런던 뉴파크스트리트 채플의 담임목사가 되었으며, 그의 영향력 있는 설교로 교회는 급속히 성장했다. 이후 1861년, 5,000석 규모의 메트로폴리탄 태버너클을 건립하고 그곳에서 사역을 이어갔다.
+그의 설교는 철저한 성경 중심의 개혁주의 신학을 바탕으로 했으며, 명확하고 열정적인 전달 방식으로 수많은 사람들에게 감동을 주었다. 생애 동안 3,600편 이상의 설교와 140여 권의 저서를 남겼으며, 그의 설교집은 오늘날까지도 널리 읽힌다.
+스펄전은 단순한 설교자에 그치지 않고 사회 활동에도 적극 참여했다. 그는 고아원을 설립하여 가난한 어린이들을 돌보았으며, 목회자 대학을 세워 후진 양성에도 힘썼다. 그의 사역과 가르침은 현재까지도 많은 기독교인들에게 영향을 미치고 있다.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>06</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>서평자인 나는 스펄전의 설교를 읽으며 수십 년 동안의 불성실을 회개하지 않을 수 없었다. 목회자들에게 스펄전 설교는 최고의 설교 모델이다. 미래의 목회자들에게 스펄전 설교는 좋은 교본이다. 평신도들에게 스펄전 설교는 더 깊은 은혜와 감동의 메시지이다. 
+스펄전의 설교들을 보면, 마치 16-17세기 청교도들의 위대한 설교들을 19세기로 옮겨놓은 듯하다. 설교 내용은 매우 예리하고 치밀하다. 성경 주석은 칼빈주의적이며 개혁적이며 복음주의적이다. 설교 방식은 영화의 한 컷 한 컷이 빠르게 진행되듯이 각 주제가 속도감 있게 전개된다. 그래서 설교 길이는 길지만, 결코 늘어진다는 느낌이 없다. 적용은 매우 구체적이고 실재적이며 감동적이다. 나아가 신자들의 영적 성장뿐만 아니라 불신자들의 회심을 위한 탁월한 적용으로 손색이 없다. 그러다 보니, 19세기 설교가 포스트모던 시대인 21세기 현재 선포되더라도 거의 이질감이 느껴지지 않을 정도로 친근하다. 과장되게 표현하자면, 스펄전의 설교 원고를 오늘날 강단에서 몇 개의 예화만 고친 채 그대로 설교하더라도 회중들을 충분히 은혜의 용광로 속에 머물게 할 수 있을 것 같다.</Text>
+      </TextContent>
+      <SupportingResource>
+        <ResourceContentType>01</ResourceContentType>
+        <ContentAudience>00</ContentAudience>
+        <ResourceMode>03</ResourceMode>
+        <ResourceVersion>
+          <ResourceForm>02</ResourceForm>
+          <ResourceLink>9791124736722.jpg</ResourceLink>
+        </ResourceVersion>
+      </SupportingResource>
+    </CollateralDetail>
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>나무와열매</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>나무와열매</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <Date>20261019</Date>
+      </PublishingDate>
+    </PublishingDetail>
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierName>나무와열매</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>10000</PriceAmount>
+          <CurrencyCode>KRW</CurrencyCode>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+</ONIXMessage>
