@@ -488,15 +488,26 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         '<nav epub:type="toc" id="toc"><h1>목차</h1><ol>\n' + "\n".join(li_parts) + '\n</ol></nav>\n</body>\n</html>\n'
     )
 
-    # ---- fonts: read+deobfuscate (if encrypted), identifier for key from ORIGINAL opf ----
+    # ---- fonts: read+deobfuscate (if encrypted) ----
+    # NOTE: InDesign exported EVERY book in this 10-book batch with the exact
+    # same dc:identifier (urn:uuid:29d919dd-...) - a cross-book InDesign
+    # export defect, not something this pipeline introduced. dc:identifier
+    # is the OPF's unique-identifier (readers/stores use it for library
+    # entries, reading-position sync, de-duplication); shipping 10 different
+    # books under one identical id risks them being treated as the same
+    # title. Generate a fresh, per-book id instead - uuid5 (deterministic
+    # from the ISBN) so re-running this script on the same book always
+    # reproduces the same id rather than minting a new "edition" each time.
+    import uuid as _uuid
     m_id = re.search(r'<dc:identifier[^>]*>([^<]*)</dc:identifier>', opf_text)
-    identifier_text = m_id.group(1) if m_id else ""
+    original_identifier = m_id.group(1) if m_id else ""
+    identifier_text = 'urn:uuid:' + str(_uuid.uuid5(_uuid.NAMESPACE_URL, 'isbn:' + isbn13))
     has_encryption = 'META-INF/encryption.xml' in names
     new_font_bytes = {}
     if has_encryption:
         enc_text = zin.read('META-INF/encryption.xml').decode('utf-8')
         font_refs = re.findall(r'CipherReference URI="([^"]+)"', enc_text)
-        key = idpf_key(identifier_text)
+        key = idpf_key(original_identifier)  # fonts were obfuscated with InDesign's ORIGINAL id
         for ref in font_refs:
             zpath = unquote(ref)
             if zpath not in names:
@@ -532,6 +543,33 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
 </package>
 '''
 
+    # ---- re-obfuscate fonts for the OUTPUT identifier and rebuild encryption.xml ----
+    # Fonts were deobfuscated above only to verify/relocate them; shipping them
+    # back out in the clear drops the IDPF embedding protection InDesign
+    # originally applied to every one of these fonts. Several of them are
+    # Adobe Creative Cloud fonts whose license permits ebook embedding only
+    # when the font data is "protected" (not a plain, freely-extractable
+    # file) - XOR obfuscation is self-inverse, so re-running deobfuscate()
+    # on the already-clear bytes re-obfuscates them with the same key.
+    reobfuscated = {}
+    if has_encryption and identifier_text:
+        key = idpf_key(identifier_text)
+        for zpath, clear_bytes in new_font_bytes.items():
+            reobfuscated[zpath] = deobfuscate(clear_bytes, key)
+    enc_refs = sorted(reobfuscated.keys()) if reobfuscated else sorted(
+        fn for fn in names if fn.startswith('OEBPS/font/')) if has_encryption else []
+    encryption_xml = None
+    if enc_refs:
+        enc_entries = "\n\t".join(
+            '<enc:EncryptedData><enc:EncryptionMethod Algorithm="http://www.idpf.org/2008/embedding" />'
+            f'<enc:CipherData><enc:CipherReference URI="{quote(p)}" /></enc:CipherData></enc:EncryptedData>'
+            for p in enc_refs
+        )
+        encryption_xml = (
+            '<encryption xmlns="urn:oasis:names:tc:opendocument:xmlns:container" '
+            'xmlns:enc="http://www.w3.org/2001/04/xmlenc#">\n\t' + enc_entries + '\n</encryption>\n'
+        )
+
     tmp_path = out_path + '.tmp'
     zout = zipfile.ZipFile(tmp_path, 'w')
     for item in zin.infolist():
@@ -544,12 +582,17 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         if fn.startswith('META-INF/'):
             zout.writestr(fn, zin.read(fn))
             continue
+        if fn.startswith('OEBPS/font/') and fn in reobfuscated:
+            zout.writestr(fn, reobfuscated[fn])
+            continue
         if fn.startswith('OEBPS/font/') and fn in new_font_bytes:
             zout.writestr(fn, new_font_bytes[fn])
             continue
         if fn.startswith('OEBPS/font/') or fn.startswith('OEBPS/image/'):
             zout.writestr(fn, zin.read(fn))
             continue
+    if encryption_xml:
+        zout.writestr('META-INF/encryption.xml', encryption_xml)
     zout.writestr('OEBPS/content.opf', opf)
     zout.writestr('OEBPS/toc.ncx', ncx)
     zout.writestr('OEBPS/nav.xhtml', nav_xhtml)
