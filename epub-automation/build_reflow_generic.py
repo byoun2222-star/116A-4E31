@@ -595,6 +595,29 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         ncx = apply_renames(ncx)
         nav_xhtml = apply_renames(nav_xhtml)
 
+    # ---- strip dangling internal hyperlinks (target page no longer exists) ----
+    # Some chapter-title/roman-divider paragraphs carry an InDesign-authored
+    # self-referencing or cross-reference hyperlink pointing at another page
+    # by its original filename. If that target page was itself dropped
+    # elsewhere in this pipeline (duplicate roman label, merged into another
+    # chapter, etc.) the link now dangles and trips epubcheck RSC-007. The
+    # link is cosmetic (the reader never needed it to navigate - nav.xhtml/
+    # toc.ncx already provide real navigation), so just unwrap it: drop the
+    # <a href="...">...</a> tags and keep the inner text.
+    valid_hrefs = set(write_data.keys()) | {'cover.xhtml'}
+    DANGLING_A_RE = re.compile(r'<a\b[^>]*\bhref="([^"#]+\.xhtml)[^"]*"[^>]*>(.*?)</a>', re.DOTALL)
+
+    def strip_dangling_links(text):
+        def repl(m):
+            target, inner = m.group(1), m.group(2)
+            if unquote(target) in valid_hrefs or target in valid_hrefs:
+                return m.group(0)
+            return inner
+        return DANGLING_A_RE.sub(repl, text)
+
+    write_data = {h: strip_dangling_links(d) if isinstance(d, str) else d
+                  for h, d in write_data.items()}
+
     tmp_path = out_path + '.tmp'
     zout = zipfile.ZipFile(tmp_path, 'w')
     for item in zin.infolist():
