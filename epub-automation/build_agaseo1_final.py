@@ -25,6 +25,12 @@ ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X']
 def get_body_inner(t):
     return re.search(r'<body[^>]*>(.*)</body>', t, re.DOTALL).group(1)
 
+def quote_href(href):
+    # quote() on a raw "#" turns it into "%23" and breaks the fragment -
+    # quote only the file-path part, leave an existing "#anchor" suffix as-is.
+    path, sep, frag = href.partition('#')
+    return quote(path) + sep + frag
+
 def main():
     zin = zipfile.ZipFile(SRC, 'r')
     def read(suffix):
@@ -143,7 +149,7 @@ def main():
     )
 
     # ---- spine order ----
-    spine_order = ['cover', 'cover-img', 'fm1-publisher', 'fm2-titlepage', 'fm3-colophon', 'fm4-english'] \
+    spine_order = ['cover', 'fm0-title-intro', 'fm1-publisher', 'fm2-titlepage', 'fm3-colophon', 'fm4-english'] \
         + [f'ch{i}' for i in range(1, 11)]
     if 'backcover' in files:
         spine_order.append('backcover')
@@ -165,7 +171,14 @@ def main():
     zout.writestr('OEBPS/cover.xhtml', zin.read('OEBPS/cover.xhtml'))
     zout.writestr(f'OEBPS/{BASE}.xhtml', base_text_clean.encode('utf-8'))
 
-    id_to_href = {'cover': 'cover.xhtml', 'cover-img': f'{BASE}.xhtml'}
+    # NOTE: this id used to be named 'cover-img' under the (wrong) assumption
+    # it was just a throwaway duplicate of the cover image. It is not - it is
+    # the real "내지 한글표지 + 저자소개" page (title/author/translator block
+    # followed by the full Spurgeon biography essay, ~8600 chars). It was
+    # missing from the nav outline entirely, which is why the owner reported
+    # "저자소개가 빠졌다" (2026-10-01) even though the text was present in the
+    # spine - a reader had no bookmark to find it. Renamed + added to outline.
+    id_to_href = {'cover': 'cover.xhtml', 'fm0-title-intro': f'{BASE}.xhtml'}
     for sid in files:
         id_to_href[sid] = f'{sid}.xhtml' if not sid.startswith('ch') else f'{sid}.xhtml'
     for sid, (label, content) in files.items():
@@ -208,6 +221,8 @@ def main():
 
     # ---- nav + ncx ----
     outline = [
+        ('내지 한글표지', f'{BASE}.xhtml', []),
+        ('저자 소개', f'{BASE}.xhtml#_idTextAnchor000', []),
         ('출판사 소개', 'fm1-publisher.xhtml', []),
         ('내지 한글표지', 'fm2-titlepage.xhtml', []),
         ('판권', 'fm3-colophon.xhtml', []),
@@ -222,7 +237,7 @@ def main():
         play_order += 1
         entry = (f'<navPoint id="navpoint{play_order}" playOrder="{play_order}">'
                  f'<navLabel><text>{label}</text></navLabel>'
-                 f'<content src="{quote(href)}" />')
+                 f'<content src="{quote_href(href)}" />')
         for aid, sub_label in children:
             play_order += 1
             entry += (f'<navPoint id="navpoint{play_order}" playOrder="{play_order}">'
@@ -241,7 +256,7 @@ def main():
 
     li_parts = []
     for label, href, children in outline:
-        li = f'<li><a href="{quote(href)}">{label}</a>'
+        li = f'<li><a href="{quote_href(href)}">{label}</a>'
         if children:
             sub_li = "".join(f'<li><a href="{quote(href)}#{quote(aid)}">{sub_label}</a></li>' for aid, sub_label in children)
             li += f'<ol>{sub_li}</ol>'

@@ -155,6 +155,13 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         text = visible_text(raw)
         img_count = len(re.findall(r'<img', raw))
         kind = classify(sid, href, text, img_count > 0, raw)
+        # the un-suffixed "base_stem" file (no "-N" in its name) is InDesign
+        # re-embedding the cover image as its own full page right after
+        # cover.xhtml - a second, near-duplicate cover that readers (observed
+        # on Kyobo) get stuck on since it doesn't advance like a real page.
+        # Owner directive 2026-10-01: always drop it, keep only cover.xhtml.
+        if base_stem and href == base_stem + '.xhtml' and not text.strip() and img_count > 0:
+            kind = 'dup_cover'
         info[sid] = {'href': href, 'text': text, 'kind': kind, 'raw': raw, 'img': img_count}
 
     ordered = []
@@ -294,7 +301,7 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
                 seen_roman.add(label)
 
     # ---- drop blanks, toc_entry, toc_heading, roman(consumed) ----
-    DROP_KINDS = {'blank', 'toc_entry', 'toc_heading', 'roman', 'toc_dump'}
+    DROP_KINDS = {'blank', 'toc_entry', 'toc_heading', 'roman', 'toc_dump', 'dup_cover'}
     front_order_score = {'publisher': 0, 'fm_title': 1, 'colophon': 2, 'english_title': 3}
     front_items = [s for s in ordered if info[s]['kind'] in front_order_score and s not in drop_ids]
     front_items.sort(key=lambda s: front_order_score[info[s]['kind']])
@@ -304,9 +311,12 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
     # find insertion point: right before the first 'chapter' or, failing that,
     # right before the first substantial 'body' file (the intro essay)
     insert_at = 0
+    intro_sid = None
     for idx, s in enumerate(kept):
         if info[s]['kind'] in ('chapter', 'body') and len(info[s]['text']) > 80:
             insert_at = idx
+            if info[s]['kind'] == 'body':
+                intro_sid = s
             break
     new_order = kept[:insert_at] + front_items + kept[insert_at:]
 
@@ -335,6 +345,12 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
             title_txt = m.group(1) if m else info[sid]['text'][:60]
             roman = info[sid].get('roman_label', '')
             chapter_titles.append((sid, href, f'{roman} {title_txt}'.strip()))
+        elif sid == intro_sid:
+            # the intro essay (author bio/publishing-purpose content) had NO
+            # nav/bookmark entry at all before this fix - a reader could only
+            # reach it by linear page-flipping, which read as "missing" on
+            # Kyobo's own chapter-list UI (owner report, 2026-10-01).
+            chapter_titles.append((sid, href, '저자 소개'))
 
     # ---- sub-heading anchors (_-스타일) within chapters, for nested nav ----
     chapter_subheads = {}
