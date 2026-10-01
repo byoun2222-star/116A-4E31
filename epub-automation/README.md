@@ -61,10 +61,22 @@
 | `batch_indesign_to_epub.py` | 고정형 EPUB 배치 변환(검증됨, 145권 전량 성공) |
 | `fix_indesign_epub.py` | 공통 후처리: 파일명 정규화, IDPF 폰트 복호화(encryption.xml 제거), dc:title/language 통일, 표지 이미지 교체 |
 | `build_reflow_final.py` | 리플로우 EPUB 빌드(1권 전용, 구조가 하드코딩됨 — 참고용 예제) |
-| `build_reflow_generic.py` | **리플로우 EPUB 빌드 일반화 버전** — 콘텐츠 마커 기반으로 앞부속/목차/장 구조를 자동 탐지(9/10권 검증 완료) |
-| `batch10_export.py` | InDesign COM으로 여러 책을 순회하며 리플로우 raw export |
-| `batch10_postprocess.py` | raw export에 `build_reflow_generic.py` 적용 + epubcheck 검증 배치 실행 |
+| `build_reflow_generic.py` | **리플로우 EPUB 빌드 일반화 버전** — 콘텐츠 마커 기반으로 앞부속/목차/장 구조를 자동 탐지(10/10권 정밀 검증 + 145/145권 실험적 확장 완료, 아래 참조) |
+| `batch10_export.py` / `batch10_postprocess.py` | 10권 파일럿용 InDesign raw export + 후처리 배치 |
+| `batch145_reflow_export.py` / `batch145_reflow_postprocess.py` | **145권 전체 확장용** — `resolve_indd_paths.py`로 찾은 경로를 20권 단위 배치로 export+후처리(`python batch145_reflow_export.py <시작인덱스> <개수>`) |
 | `fix_reflow_spine_order.py`, `fix_reflow_structure.py` | 초기 개발 단계의 부분 스크립트(참고용, `build_reflow_generic.py`에 통합됨) |
+
+## 145권 리플로우 확장 현황 (2026-10-01)
+
+145권 전체 빌드 성공 + epubcheck 0오류 — **단, 이건 10권 파일럿과 같은 수준의 검증이
+아니다.** 오너 지시로 가볍게(epubcheck만) 돌린 실험적 확장이며, 아래는 아직 안 한 것:
+- 리더 앱(교보·토리움·킨들)에서 직접 열어본 책 0권
+- raw vs final 글자수 대조(콘텐츠 손실 감사) 미실시 — 10권 때 이걸로 시편44의 22KB
+  분량 챕터 소실을 잡아냈었다. 145권은 이 감사를 안 거쳤으므로 유사한 숨은 손실이
+  있을 수 있다.
+- "6. 스펄전의 여호수아서의 복음이야기" 1권은 `chapters: 0`으로 빌드됨(원인 미조사)
+- 오너가 "최종 완성본 기준으로 작업하라"고 리플로우 작업 범위를 명확히 했으므로
+  (고정형만 "대충 해도 됨"), **배포 전 10권 파일럿 수준의 전체 재검증이 필요하다.**
 
 ## 알려진 한계 / 향후 개선 필요
 
