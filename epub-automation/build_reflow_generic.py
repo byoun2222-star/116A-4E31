@@ -615,7 +615,17 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
             return inner
         return DANGLING_A_RE.sub(repl, text)
 
-    write_data = {h: strip_dangling_links(d) if isinstance(d, str) else d
+    # Some words carry an InDesign dictionary/glossary lookup hyperlink
+    # authored against the LOCAL AUTHORING MACHINE's own file path (a
+    # "javascript:openDict(...)" pseudo-URL embedded inside a file:// URL) -
+    # meaningless and invalid outside that machine, trips epubcheck RSC-030
+    # "File URL not allowed in EPUB". Same treatment: unwrap, keep the word.
+    BAD_SCHEME_A_RE = re.compile(r'<a\b[^>]*\bhref="(file://[^"]*|javascript:[^"]*)"[^>]*>(.*?)</a>', re.DOTALL)
+
+    def strip_bad_scheme_links(text):
+        return BAD_SCHEME_A_RE.sub(lambda m: m.group(2), text)
+
+    write_data = {h: strip_bad_scheme_links(strip_dangling_links(d)) if isinstance(d, str) else d
                   for h, d in write_data.items()}
 
     tmp_path = out_path + '.tmp'

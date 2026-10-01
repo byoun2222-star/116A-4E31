@@ -43,6 +43,9 @@ def main():
         base = os.path.basename(raw_path)[:-len("_raw.epub")]
         title, isbn = base.rsplit("__", 1)
         out_path = os.path.join(OUT_DIR, base + "_final.epub")
+        if os.path.exists(out_path):
+            results["ok"].append(title)
+            continue
         print(f"=== {title} ===", flush=True)
         try:
             info = fix_epub_core(raw_path, out_path, title, isbn, find_cover_jpg(isbn))
