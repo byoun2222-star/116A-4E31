@@ -206,6 +206,19 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
                 suffix_block = re.sub(r'</body>\s*</html>\s*$', '', suffix_block).rstrip()
                 info[sid]['raw'] = prefix
                 info[sid]['text'] = visible_text(prefix)
+                # classify() ran on the ORIGINAL (still tail-contaminated)
+                # text before this split, so a real chapter whose tail just
+                # happened to carry the publisher blurb (e.g. the book's
+                # LAST chapter, where InDesign appended it after "아멘!")
+                # could have been classified 'publisher' for the whole file.
+                # Re-classify on the now-cleaned text so it falls back to
+                # 'body'/'chapter' - otherwise the real content gets shoved
+                # to the front matter and the actual front matter never
+                # shows (owner report 2026-10-01, 잠언2: "앞부분이 통째로
+                # 없다", caused by a late chapter displacing the real front
+                # matter to the top of the spine).
+                info[sid]['kind'] = classify(sid, info[sid]['href'], info[sid]['text'],
+                                              '<img' in prefix, prefix)
                 if kind == 'publisher':
                     extra_counter += 1
                     new_id = f'__orphan_pub_{extra_counter}'
