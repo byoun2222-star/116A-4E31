@@ -182,43 +182,27 @@ def main():
     if 'backcover' in files:
         spine_order.append('backcover')
 
-    # ---- re-obfuscate fonts under a fresh per-book identifier ----
+    # ---- fresh per-book identifier (fonts shipped unprotected - see below) ----
     # InDesign exported EVERY book in this 10-book batch with the identical
     # dc:identifier (urn:uuid:29d919dd-...) - confirmed across all 9 generic
     # books AND this one. Shipping 10 different books under one shared
     # unique-identifier risks readers/stores treating them as the same
     # title. Generate a fresh id (uuid5, deterministic from ISBN so re-runs
-    # are stable) and re-obfuscate the fonts to match it - fonts were
-    # encrypted with the OLD shared id, so they must be decoded with that
-    # key and re-encoded with the new one (XOR is self-inverse).
+    # are stable).
     orig_opf = zin.read('OEBPS/content.opf').decode('utf-8')
-    m_id = re.search(r'<dc:identifier[^>]*>([^<]*)</dc:identifier>', orig_opf)
-    original_identifier = m_id.group(1) if m_id else ""
     new_identifier = 'urn:uuid:' + str(uuid.uuid5(uuid.NAMESPACE_URL, 'isbn:' + ISBN13))
-    old_key = idpf_key(original_identifier)
-    new_key = idpf_key(new_identifier)
-    enc_text = zin.read('META-INF/encryption.xml').decode('utf-8')
-    font_refs = re.findall(r'CipherReference URI="([^"]+)"', enc_text)
-    reobfuscated_fonts = {}
-    for ref in font_refs:
-        zpath = ref
-        if zpath not in zin.namelist():
-            continue
-        clear = deobfuscate(zin.read(zpath), old_key)
-        if looks_like_font(clear):
-            reobfuscated_fonts[zpath] = deobfuscate(clear, new_key)
+
+    # NOTE: fonts are shipped in the clear (no IDPF obfuscation / no
+    # encryption.xml). Reverted 2026-10-01: Aladin's own upload validator
+    # rejects any file containing META-INF/encryption.xml outright, and the
+    # owner confirmed all fonts used are properly licensed for this use
+    # regardless of embedding protection.
 
     # ---- write output ----
     zout = zipfile.ZipFile(OUT, 'w')
     keep_prefixes = ('mimetype', 'META-INF/', 'OEBPS/font/', 'OEBPS/image/')
     for item in zin.infolist():
         if item.filename == 'META-INF/encryption.xml':
-            continue
-        if item.filename in reobfuscated_fonts:
-            ni = zipfile.ZipInfo(item.filename, date_time=item.date_time)
-            ni.compress_type = item.compress_type
-            ni.external_attr = item.external_attr
-            zout.writestr(ni, reobfuscated_fonts[item.filename])
             continue
         if item.filename.startswith(keep_prefixes):
             data = zin.read(item.filename)
@@ -229,14 +213,6 @@ def main():
                 ni.compress_type = item.compress_type
                 ni.external_attr = item.external_attr
                 zout.writestr(ni, data)
-    enc_entries = "\n\t".join(
-        '<enc:EncryptedData><enc:EncryptionMethod Algorithm="http://www.idpf.org/2008/embedding" />'
-        f'<enc:CipherData><enc:CipherReference URI="{quote(p)}" /></enc:CipherData></enc:EncryptedData>'
-        for p in sorted(reobfuscated_fonts.keys())
-    )
-    zout.writestr('META-INF/encryption.xml',
-        '<encryption xmlns="urn:oasis:names:tc:opendocument:xmlns:container" '
-        'xmlns:enc="http://www.w3.org/2001/04/xmlenc#">\n\t' + enc_entries + '\n</encryption>\n')
     zout.writestr('OEBPS/css/idGeneratedStyles.css', css)
     zout.writestr('OEBPS/cover.xhtml', zin.read('OEBPS/cover.xhtml'))
 

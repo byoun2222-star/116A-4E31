@@ -556,32 +556,44 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
 </package>
 '''
 
-    # ---- re-obfuscate fonts for the OUTPUT identifier and rebuild encryption.xml ----
-    # Fonts were deobfuscated above only to verify/relocate them; shipping them
-    # back out in the clear drops the IDPF embedding protection InDesign
-    # originally applied to every one of these fonts. Several of them are
-    # Adobe Creative Cloud fonts whose license permits ebook embedding only
-    # when the font data is "protected" (not a plain, freely-extractable
-    # file) - XOR obfuscation is self-inverse, so re-running deobfuscate()
-    # on the already-clear bytes re-obfuscates them with the same key.
-    reobfuscated = {}
-    if has_encryption and identifier_text:
-        key = idpf_key(identifier_text)
-        for zpath, clear_bytes in new_font_bytes.items():
-            reobfuscated[zpath] = deobfuscate(clear_bytes, key)
-    enc_refs = sorted(reobfuscated.keys()) if reobfuscated else sorted(
-        fn for fn in names if fn.startswith('OEBPS/font/')) if has_encryption else []
-    encryption_xml = None
-    if enc_refs:
-        enc_entries = "\n\t".join(
-            '<enc:EncryptedData><enc:EncryptionMethod Algorithm="http://www.idpf.org/2008/embedding" />'
-            f'<enc:CipherData><enc:CipherReference URI="{quote(p)}" /></enc:CipherData></enc:EncryptedData>'
-            for p in enc_refs
-        )
-        encryption_xml = (
-            '<encryption xmlns="urn:oasis:names:tc:opendocument:xmlns:container" '
-            'xmlns:enc="http://www.w3.org/2001/04/xmlenc#">\n\t' + enc_entries + '\n</encryption>\n'
-        )
+    # NOTE: fonts are shipped in the clear (no IDPF obfuscation / no
+    # encryption.xml), same as before this pipeline briefly added font
+    # protection for Adobe's "protected format" embedding requirement.
+    # Reverted 2026-10-01: Aladin's own upload validator rejects any file
+    # containing META-INF/encryption.xml outright, and the owner confirmed
+    # all fonts used are properly licensed for this use regardless of
+    # embedding protection - so protection is unnecessary here and actively
+    # breaks store compatibility.
+
+    # ---- sanitize internal filenames: English+digits only, no parens/spaces ----
+    # Aladin's own content validator rejects xhtml filenames containing
+    # Korean characters, parentheses, or spaces (owner report 2026-10-01,
+    # screenshot of the upload-rejection dialog listing every such file in
+    # this book). The original InDesign/synthetic hrefs were never
+    # sanitized by this pipeline (unlike the fixed-layout pipeline, which
+    # already renames to "text-NNNN.xhtml"). Apply the same convention here,
+    # then rewrite every reference to a renamed file across the whole book
+    # (cross-chapter links, footnote anchors, nav/ncx, the OPF itself).
+    def needs_rename(h):
+        return bool(re.search(r'[^\x00-\x7f()]|[() ]', h))
+    rename_map = {}
+    counter = 0
+    for href in write_data.keys():
+        if needs_rename(href):
+            counter += 1
+            rename_map[href] = f'text-{counter:04d}.xhtml'
+
+    if rename_map:
+        def apply_renames(text):
+            for old, new in rename_map.items():
+                text = text.replace(quote(old), new)
+                text = text.replace(old, new)
+            return text
+        write_data = {rename_map.get(h, h): apply_renames(d) if isinstance(d, str) else d
+                      for h, d in write_data.items()}
+        opf = apply_renames(opf)
+        ncx = apply_renames(ncx)
+        nav_xhtml = apply_renames(nav_xhtml)
 
     tmp_path = out_path + '.tmp'
     zout = zipfile.ZipFile(tmp_path, 'w')
@@ -595,17 +607,12 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         if fn.startswith('META-INF/'):
             zout.writestr(fn, zin.read(fn))
             continue
-        if fn.startswith('OEBPS/font/') and fn in reobfuscated:
-            zout.writestr(fn, reobfuscated[fn])
-            continue
         if fn.startswith('OEBPS/font/') and fn in new_font_bytes:
             zout.writestr(fn, new_font_bytes[fn])
             continue
         if fn.startswith('OEBPS/font/') or fn.startswith('OEBPS/image/'):
             zout.writestr(fn, zin.read(fn))
             continue
-    if encryption_xml:
-        zout.writestr('META-INF/encryption.xml', encryption_xml)
     zout.writestr('OEBPS/content.opf', opf)
     zout.writestr('OEBPS/toc.ncx', ncx)
     zout.writestr('OEBPS/nav.xhtml', nav_xhtml)
