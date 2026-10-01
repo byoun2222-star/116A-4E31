@@ -107,6 +107,12 @@ def main():
         )
 
     files['fm1-publisher'] = ('출판사 소개', page('fm1-publisher', '출판사 소개', '\t\t' + publisher_block))
+    # title-page line reuses the shared "장-제목" class (center-aligned by
+    # design for real chapter headings) - must be left-aligned on this page
+    # specifically (owner report 2026-10-01, same bug confirmed across all
+    # 10 books: showed centered on Kyobo, "원래는 왼쪽").
+    titlepage_block = re.sub(r'(<p\b[^>]*class="[^"]*장-제목[^"]*"[^>]*)(>)',
+                              r'\1 style="text-align:left !important;"\2', titlepage_block)
     files['fm2-titlepage'] = ('내지 한글표지', page('fm2-titlepage', '내지 한글표지', '\t\t' + titlepage_block))
     files['fm3-colophon'] = ('판권', page('fm3-colophon', '판권', '\t\t' + colophon_block))
     files['fm4-english'] = ('내지 영문 표지', page('fm4-english', '내지 영문 표지', '\t\t' + english_block))

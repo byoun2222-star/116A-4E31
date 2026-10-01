@@ -300,6 +300,17 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
             elif label:
                 seen_roman.add(label)
 
+    # NOTE: InDesign's export also carries the print edition's ISBN barcode
+    # image, bundled into a junk printed-TOC-fragment file (same file that
+    # gets dropped as 'toc_entry' below). Checked against other publishers'
+    # EPUBs (owner, 2026-10-01): reflowable EPUB has no fixed "last page" the
+    # way PDF does, and the OPF <dc:identifier>urn:isbn:...</dc:identifier>
+    # is the format's actual machine-readable equivalent of a barcode - a
+    # barcode IMAGE in the reading flow is not standard practice and is
+    # intentionally NOT rescued here. The colophon page's printed ISBN text
+    # plus the OPF identifier are sufficient; backcover_sid is left unset.
+    backcover_sid = None
+
     # ---- drop blanks, toc_entry, toc_heading, roman(consumed) ----
     DROP_KINDS = {'blank', 'toc_entry', 'toc_heading', 'roman', 'toc_dump', 'dup_cover'}
     front_order_score = {'publisher': 0, 'fm_title': 1, 'colophon': 2, 'english_title': 3}
@@ -319,6 +330,8 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
                 intro_sid = s
             break
     new_order = kept[:insert_at] + front_items + kept[insert_at:]
+    if backcover_sid:
+        new_order.append(backcover_sid)
 
     # ---- build fresh manifest/spine, applying merged bodies + doctype fix ----
     manifest_items = []
@@ -337,6 +350,16 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         href = info[sid]['href']
         raw = merged_bodies.get(sid, info[sid]['raw'])
         raw = fix_doctype(raw)
+        if info[sid]['kind'] == 'fm_title':
+            # the dedicated title/author/translator page reuses the shared
+            # "장-제목" class (InDesign's closest style match for a big bold
+            # line), which is CENTER-aligned by design for real chapter
+            # headings - but this title-page line must be left-aligned
+            # (owner report 2026-10-01: showed centered on Kyobo, "원래는
+            # 왼쪽"). Override only on this one page so real chapter
+            # headings elsewhere stay centered.
+            raw = re.sub(r'(<p\b[^>]*class="[^"]*장-제목[^"]*"[^>]*)(>)',
+                         r'\1 style="text-align:left !important;"\2', raw)
         write_data[href] = raw
         manifest_items.append(f'<item id="{sid}" href="{href}" media-type="application/xhtml+xml" />')
         spine_items.append(sid)
