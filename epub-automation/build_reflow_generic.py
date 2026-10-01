@@ -63,6 +63,9 @@ def classify(idx, href, text, has_img, raw=''):
         return 'toc_dump'
     if '도서출판' in t or 'TNF' in t:
         return 'publisher'
+    # dedicated title-page file: "<title> ... 지음 ... 옮김", short, no body prose
+    if '지음' in t and '옮김' in t and len(t) < 150:
+        return 'fm_title'
     if re.search(r'ISBN', t) and ('등록번호' in t or '발행' in t):
         return 'colophon'
     if ('Copyright' in t or 'Written by' in t or 'All rights reserved' in t) and re.search('[A-Za-z]{4,}', t):
@@ -90,6 +93,47 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
     href_by_id = {k: unquote(v) for k, v in manifest.items()}
     spine_ids = re.findall(r'<itemref idref="([^"]+)"', opf_text)
 
+    def split_combined_frontmatter(sid, raw):
+        """InDesign often dumps title-page-conclusion + colophon + English
+        title-page + an empty frame + the printed-TOC heading all into ONE
+        file, tagged with consistent div ids (_idContainer003/004/005/006/007).
+        Split it into separate synthetic entries so each becomes its own page
+        (matches the hand-verified book1/아가서1 structure), instead of
+        letting classify() lump the whole file under one category."""
+        if '_idContainer004"' not in raw or '_idContainer005"' not in raw:
+            return None  # not the combined pattern - leave as-is
+        def extract_div(html, div_id):
+            m = re.search(r'<div id="' + div_id + r'"[^>]*>.*?</div>', html, re.DOTALL)
+            return m.group(0) if m else ''
+        colophon_block = extract_div(raw, '_idContainer004')
+        english_block = extract_div(raw, '_idContainer005')
+        # everything between <body> and the colophon div is "title page"
+        # content, whether or not InDesign gave it an explicit _idContainer003
+        # id (observed both variants across this book series).
+        body_tag_m = re.search(r'<body[^>]*>', raw)
+        head_text_block = raw[body_tag_m.end():raw.find('<div id="_idContainer004"')]
+        title_block = ''
+
+        def page(new_id, title, inner):
+            return (
+                '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n<!DOCTYPE html>\n'
+                '<html xmlns="http://www.w3.org/1999/xhtml">\n\t<head>\n\t\t<title>' + title + '</title>\n'
+                '\t\t<link href="css/idGeneratedStyles.css" rel="stylesheet" type="text/css" />\n'
+                '\t</head>\n\t<body id="' + new_id + '">\n' + inner + '\n\t</body>\n</html>\n'
+            )
+        # NOTE: the leading head_text_block (author/translator only, no title)
+        # is intentionally NOT turned into its own page here - it's always a
+        # duplicate of a dedicated short "<title> ... 지음 ... 옮김" file that
+        # already exists elsewhere in the spine and gets classified as
+        # 'fm_title' directly (see classify()). Keeping both would show an
+        # incomplete title-less "내지 한글표지" page alongside the real one.
+        parts = []
+        if colophon_block:
+            parts.append(('__fm_colophon_' + sid, page('__fm_colophon_' + sid, '판권', colophon_block), 'colophon'))
+        if english_block:
+            parts.append(('__fm_english_' + sid, page('__fm_english_' + sid, '내지 영문 표지', english_block), 'english_title'))
+        return parts
+
     # ---- classify every spine item ----
     info = {}  # id -> dict(href, text, kind, img_count)
     for sid in spine_ids:
@@ -100,12 +144,25 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         if full not in names:
             continue
         raw = zin.read(full).decode('utf-8')
+
+        split_parts = split_combined_frontmatter(sid, raw)
+        if split_parts:
+            for new_id, new_raw, kind in split_parts:
+                t = visible_text(new_raw)
+                info[new_id] = {'href': new_id + '.xhtml', 'text': t, 'kind': kind, 'raw': new_raw, 'img': 0}
+            continue
+
         text = visible_text(raw)
         img_count = len(re.findall(r'<img', raw))
         kind = classify(sid, href, text, img_count > 0, raw)
         info[sid] = {'href': href, 'text': text, 'kind': kind, 'raw': raw, 'img': img_count}
 
-    ordered = [s for s in spine_ids if s in info]
+    ordered = []
+    for sid in spine_ids:
+        if sid in info:
+            ordered.append(sid)
+        else:
+            ordered.extend(k for k in info if k.endswith('_' + sid))
 
     # ---- split embedded orphan tails out of otherwise-real chapter files ----
     # InDesign sometimes appends an unthreaded story (publisher blurb, or a
@@ -177,26 +234,68 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
             drop_ids.add(sid)
         i += 1
 
-    # chapters not preceded by a roman file (e.g. only 1 file total) stay 'body'/other
-    # reclassify remaining un-romanized body files that directly follow a merged
-    # chapter boundary as plain body (already default)
+    # ---- merge stray 'body' continuation files into the chapter right
+    #      before them. Some chapters have a footnote (translator's note)
+    #      attached directly to the title paragraph, which InDesign exports
+    #      as its own short file; the actual sermon text then continues in a
+    #      SEPARATE following file with no roman-numeral marker of its own,
+    #      producing an unwanted page break right after the footnote. Any
+    #      'body' file sitting between a chapter and the next roman/chapter
+    #      is such a continuation and must be appended to that chapter. ----
+    i = 0
+    while i < len(ordered):
+        sid = ordered[i]
+        if info[sid]['kind'] == 'chapter' and sid not in drop_ids:
+            j = i + 1
+            while j < len(ordered) and info[ordered[j]]['kind'] == 'body':
+                cont_sid = ordered[j]
+                cur_raw = merged_bodies.get(sid, info[sid]['raw'])
+                cur_body = get_body_inner(cur_raw)
+                cont_body = get_body_inner(info[cont_sid]['raw'])
+                # the continuation file may have its OWN footnotes whose
+                # internal anchors/backlinks self-reference its own filename
+                # (e.g. "...-35.xhtml#footnote-002") - once merged into the
+                # chapter file those must point at the chapter's own filename
+                # or they become dangling links (epubcheck RSC-007).
+                own_href = info[cont_sid]['href']
+                target_href = info[sid]['href']
+                if own_href != target_href:
+                    cont_body = cont_body.replace(quote(own_href), quote(target_href))
+                    cont_body = cont_body.replace(own_href, target_href)
+                merged = cur_body.rstrip() + "\n" + cont_body.strip()
+                merged_bodies[sid] = cur_raw.replace(cur_body, merged)
+                info[sid]['text'] = info[sid]['text'] + ' ' + info[cont_sid]['text']
+                drop_ids.add(cont_sid)
+                j += 1
+            i = j
+        else:
+            i += 1
 
     # ---- de-dup: a printed TOC-page dump sometimes lands as a SECOND (or
     #      later) "roman numeral only" file that pairs up with whatever odd
-    #      fragment follows it, producing a fake duplicate "chapter". Keep
-    #      only the FIRST chapter seen for each roman label; drop the rest. ----
+    #      fragment follows it, producing a fake duplicate "chapter" with
+    #      near-zero content. Drop ONLY when the merged content is itself
+    #      junk-sized - some source documents genuinely mislabel two
+    #      consecutive real chapters with the same roman numeral (observed:
+    #      "시편44" has two substantial chapters both labelled "V"), and a
+    #      real chapter must never be dropped just because its label repeats. ----
+    JUNK_DUP_MAX_LEN = 500
     seen_roman = set()
     for sid in ordered:
         if info[sid].get('kind') == 'chapter' and sid not in drop_ids:
             label = info[sid].get('roman_label', '')
+            body_len = len(info[sid]['text'])
             if label and label in seen_roman:
-                drop_ids.add(sid)
+                if body_len < JUNK_DUP_MAX_LEN:
+                    drop_ids.add(sid)
+                # else: substantial content despite duplicate label - keep it,
+                # just leave the label as-is (nav will show the repeated roman).
             elif label:
                 seen_roman.add(label)
 
     # ---- drop blanks, toc_entry, toc_heading, roman(consumed) ----
     DROP_KINDS = {'blank', 'toc_entry', 'toc_heading', 'roman', 'toc_dump'}
-    front_order_score = {'publisher': 0, 'colophon': 1, 'english_title': 2}
+    front_order_score = {'publisher': 0, 'fm_title': 1, 'colophon': 2, 'english_title': 3}
     front_items = [s for s in ordered if info[s]['kind'] in front_order_score and s not in drop_ids]
     front_items.sort(key=lambda s: front_order_score[info[s]['kind']])
 
@@ -290,8 +389,9 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         '\n.장-제목, .장-제목 span { font-family:"Adobe Myungjo Std M", serif !important; font-size:12pt !important; color:#000000 !important; }\n'
         '._-스타일, ._-스타일 span { font-family:"KoPubWorldDotum Bold", sans-serif !important; font-size:11pt !important; color:#000000 !important; background-color:transparent !important; }\n'
         '.본문, .본문 span { font-family:"SeoulHangang M", serif !important; font-size:10pt !important; color:#000000 !important; }\n'
-        '.본문-줄이기, .본문-줄이기 span { font-family:"SeoulHangang M", serif !important; font-size:10pt !important; color:#000000 !important; }\n'
-        '.인용-및-성경구절, .인용-및-성경구절 span, .인용-싯구, .인용-싯구 span { font-family:"SeoulHangang B", serif !important; font-style:italic !important; font-size:9pt !important; color:#0c3388 !important; }\n'
+        '.본문-줄이기, .본문-줄이기 span, .본문-간격-축소, .본문-간격-축소 span { font-family:"SeoulHangang M", serif !important; font-size:10pt !important; color:#000000 !important; }\n'
+        '.인용-및-성경구절, .인용-및-성경구절 span, .인용-싯구, .인용-싯구 span, .인용-간격-축소, .인용-간격-축소 span'
+        ' { font-family:"SeoulHangang B", serif !important; font-style:italic !important; font-size:9pt !important; color:#0c3388 !important; }\n'
         '.chapter-roman { text-align:center; text-indent:0; font-size:12pt !important; font-family:"HYHeadLine-Medium", serif !important; margin-left:0; margin-right:0; }\n'
     )
 
@@ -306,7 +406,7 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         return src
 
     for s in front_items:
-        label = {'publisher': '출판사 소개', 'colophon': '판권', 'english_title': '내지 영문 표지'}[info[s]['kind']]
+        label = {'publisher': '출판사 소개', 'fm_title': '내지 한글표지', 'colophon': '판권', 'english_title': '내지 영문 표지'}[info[s]['kind']]
         add_nav(label, info[s]['href'])
         li_parts.append(f'<li><a href="{quote(info[s]["href"])}">{label}</a></li>')
 
@@ -324,7 +424,7 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
     pi = 0
     for s in front_items:
         pi += 1
-        label = {'publisher': '출판사 소개', 'colophon': '판권', 'english_title': '내지 영문 표지'}[info[s]['kind']]
+        label = {'publisher': '출판사 소개', 'fm_title': '내지 한글표지', 'colophon': '판권', 'english_title': '내지 영문 표지'}[info[s]['kind']]
         ncx_nav_xml.append(f'<navPoint id="navpoint{pi}" playOrder="{pi}"><navLabel><text>{label}</text></navLabel><content src="{quote(info[s]["href"])}" /></navPoint>')
     for sid, href, title in chapter_titles:
         pi += 1
