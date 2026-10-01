@@ -101,7 +101,7 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
         (matches the hand-verified book1/아가서1 structure), instead of
         letting classify() lump the whole file under one category."""
         if '_idContainer004"' not in raw or '_idContainer005"' not in raw:
-            return None  # not the combined pattern - leave as-is
+            return None, None  # not the combined pattern - leave as-is
         def extract_div(html, div_id):
             m = re.search(r'<div id="' + div_id + r'"[^>]*>.*?</div>', html, re.DOTALL)
             return m.group(0) if m else ''
@@ -121,18 +121,29 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
                 '\t\t<link href="css/idGeneratedStyles.css" rel="stylesheet" type="text/css" />\n'
                 '\t</head>\n\t<body id="' + new_id + '">\n' + inner + '\n\t</body>\n</html>\n'
             )
-        # NOTE: the leading head_text_block (author/translator only, no title)
-        # is intentionally NOT turned into its own page here - it's always a
-        # duplicate of a dedicated short "<title> ... 지음 ... 옮김" file that
-        # already exists elsewhere in the spine and gets classified as
-        # 'fm_title' directly (see classify()). Keeping both would show an
-        # incomplete title-less "내지 한글표지" page alongside the real one.
+        # NOTE: the leading head_text_block is USUALLY just a short
+        # author/translator duplicate of a dedicated "<title> ... 지음 ...
+        # 옮김" file that already exists elsewhere in the spine (classified
+        # 'fm_title' directly, see classify()) - normally discarded here.
+        # BUT: InDesign sometimes appends this same colophon+english tail
+        # onto the end of the LAST real chapter's own story instead of a
+        # short title page (observed 2026-10-01, "여호수아서의 복음이야기"
+        # ch.XV: a 21,685-char sermon lost ENTIRELY because this function
+        # unconditionally discarded everything before the tail markers).
+        # If the head is substantial, it's real content, not a title
+        # duplicate - keep it as the original file's (trimmed) body instead
+        # of throwing it away.
+        head_stripped = re.sub(r'\s+', '', re.sub('<[^>]+>', '', head_text_block))
+        trimmed_head_raw = None
+        if len(head_stripped) > 300:
+            cut_at = raw.find('<div id="_idContainer004"')
+            trimmed_head_raw = raw[:cut_at] + '</body>\n</html>\n'
         parts = []
         if colophon_block:
             parts.append(('__fm_colophon_' + sid, page('__fm_colophon_' + sid, '판권', colophon_block), 'colophon'))
         if english_block:
             parts.append(('__fm_english_' + sid, page('__fm_english_' + sid, '내지 영문 표지', english_block), 'english_title'))
-        return parts
+        return parts, trimmed_head_raw
 
     # ---- classify every spine item ----
     info = {}  # id -> dict(href, text, kind, img_count)
@@ -145,12 +156,14 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
             continue
         raw = zin.read(full).decode('utf-8')
 
-        split_parts = split_combined_frontmatter(sid, raw)
+        split_parts, trimmed_head_raw = split_combined_frontmatter(sid, raw)
         if split_parts:
             for new_id, new_raw, kind in split_parts:
                 t = visible_text(new_raw)
                 info[new_id] = {'href': new_id + '.xhtml', 'text': t, 'kind': kind, 'raw': new_raw, 'img': 0}
-            continue
+            if trimmed_head_raw is None:
+                continue
+            raw = trimmed_head_raw  # substantial real content - keep classifying it below
 
         text = visible_text(raw)
         img_count = len(re.findall(r'<img', raw))
@@ -166,10 +179,10 @@ def fix_epub_core(src_path, out_path, correct_title, isbn13, cover_jpg_path, lan
 
     ordered = []
     for sid in spine_ids:
+        synthetic_children = [k for k in info if k.endswith('_' + sid) and k != sid]
         if sid in info:
             ordered.append(sid)
-        else:
-            ordered.extend(k for k in info if k.endswith('_' + sid))
+        ordered.extend(synthetic_children)
 
     # ---- split embedded orphan tails out of otherwise-real chapter files ----
     # InDesign sometimes appends an unthreaded story (publisher blurb, or a
