@@ -1,0 +1,27 @@
+{
+  "workflow_name": "maf-publishing-poc-phase2a",
+  "graph_signature_hash": "9a62fbafcc2898b5741854aea11f9168a362cbac0a5a378e83875501982433b2",
+  "checkpoint_id": "a0114fe3-a089-4ed5-93be-5c513ef1e9e2",
+  "previous_checkpoint_id": "77765d9f-426f-4092-8ae2-a4da109a0cb0",
+  "timestamp": "2026-09-18T05:00:42.855024+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "sync_cys_state": {},
+      "register_providers": {},
+      "router_decision": {},
+      "cost_guard": {},
+      "owner_approval_2a": {},
+      "finalize": {}
+    },
+    "pending_message": {
+      "__pickled__": "gAWVNQEAAAAAAACMFndvcmtmbG93LnBoYXNlMmFfc3RlcHOUjA5QaGFzZTJBTWVzc2FnZZSTlCmBlH2UKIwHYm9va19pZJSMDEJPT0stUE9DLTAwMpSMBXRpdGxllIwQVEVTVCAyQS1JIOuPhOyEnJSMD3dvcmtmbG93X3J1bl9pZJSMEHJ1bi1CT09LLVBPQy0wMDKUjBRtb2NrX3Byb3ZpZGVyX2hlYWx0aJROjBFyZXF1aXJlc19wYWlkX2FwaZSJjAV0cmFjZZRdlCiMDlNZTkNfQ1lTX1NUQVRFlIwSUkVHSVNURVJfUFJPVklERVJTlIwWUk9VVEVSX0RFQ0lTSU9OPUNMQVVERZSMEUNPU1RfR1VBUkRfUEFTU0VElGWMD3JvdXRlcl9kZWNpc2lvbpSMBkNMQVVERZR1Yi4=",
+      "__type__": "workflow.phase2a_steps:Phase2AMessage"
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 8,
+  "metadata": {},
+  "version": "1.0"
+}

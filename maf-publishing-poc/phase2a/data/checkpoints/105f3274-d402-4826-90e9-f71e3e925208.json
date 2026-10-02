@@ -1,0 +1,34 @@
+{
+  "workflow_name": "maf-publishing-poc-phase2a",
+  "graph_signature_hash": "9a62fbafcc2898b5741854aea11f9168a362cbac0a5a378e83875501982433b2",
+  "checkpoint_id": "105f3274-d402-4826-90e9-f71e3e925208",
+  "previous_checkpoint_id": "c7c7da08-d10a-4da4-9d83-c19bf3a725ab",
+  "timestamp": "2026-09-18T05:00:42.696454+00:00",
+  "messages": {
+    "internal:owner_approval_2a": [
+      {
+        "__pickled__": "gAWVzwIAAAAAAACMKmFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ydW5uZXJfY29udGV4dJSMD1dvcmtmbG93TWVzc2FnZZSTlCmBlH2UKIwEZGF0YZSMFndvcmtmbG93LnBoYXNlMmFfc3RlcHOUjBBBcHByb3ZhbFJlc3BvbnNllJOUKYGUfZQojAhhcHByb3ZlZJSIjAthcHByb3ZlZF9ieZSMBW93bmVylHVijAlzb3VyY2VfaWSUjBppbnRlcm5hbDpvd25lcl9hcHByb3ZhbF8yYZSMCXRhcmdldF9pZJSMEW93bmVyX2FwcHJvdmFsXzJhlIwEdHlwZZRoAIwLTWVzc2FnZVR5cGWUk5SMCHJlc3BvbnNllIWUUpSMDnRyYWNlX2NvbnRleHRzlE6MD3NvdXJjZV9zcGFuX2lkc5ROjBtvcmlnaW5hbF9yZXF1ZXN0X2luZm9fZXZlbnSUjCJhZ2VudF9mcmFtZXdvcmsuX3dvcmtmbG93cy5fZXZlbnRzlIwNV29ya2Zsb3dFdmVudJSTlCmBlH2UKGgSjAxyZXF1ZXN0X2luZm+UaAVoBowPQXBwcm92YWxSZXF1ZXN0lJOUKYGUfZQojAdib29rX2lklIwMQk9PSy1QT0MtMDAylIwGYWN0aW9ulIwWT1dORVJfQVBQUk9WQUxfUEhBU0UyQZR1YowGb3JpZ2lulGgbjBNXb3JrZmxvd0V2ZW50U291cmNllJOUjAhFWEVDVVRPUpSFlFKUjAVzdGF0ZZROjAdkZXRhaWxzlE6MC2V4ZWN1dG9yX2lklE6MC19yZXF1ZXN0X2lklIwXYXBwcm92YWwyYS1CT09LLVBPQy0wMDKUjBNfc291cmNlX2V4ZWN1dG9yX2lklGgRjA1fcmVxdWVzdF90eXBllGgijA5fcmVzcG9uc2VfdHlwZZRoCIwJaXRlcmF0aW9ulE51YnViLg==",
+        "__type__": "agent_framework._workflows._runner_context:WorkflowMessage"
+      }
+    ]
+  },
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "sync_cys_state": {},
+      "register_providers": {},
+      "router_decision": {},
+      "cost_guard": {},
+      "owner_approval_2a": {},
+      "finalize": {}
+    },
+    "pending_message": {
+      "__pickled__": "gAWVNQEAAAAAAACMFndvcmtmbG93LnBoYXNlMmFfc3RlcHOUjA5QaGFzZTJBTWVzc2FnZZSTlCmBlH2UKIwHYm9va19pZJSMDEJPT0stUE9DLTAwMpSMBXRpdGxllIwQVEVTVCAyQS1JIOuPhOyEnJSMD3dvcmtmbG93X3J1bl9pZJSMEHJ1bi1CT09LLVBPQy0wMDKUjBRtb2NrX3Byb3ZpZGVyX2hlYWx0aJROjBFyZXF1aXJlc19wYWlkX2FwaZSJjAV0cmFjZZRdlCiMDlNZTkNfQ1lTX1NUQVRFlIwSUkVHSVNURVJfUFJPVklERVJTlIwWUk9VVEVSX0RFQ0lTSU9OPUNMQVVERZSMEUNPU1RfR1VBUkRfUEFTU0VElGWMD3JvdXRlcl9kZWNpc2lvbpSMBkNMQVVERZR1Yi4=",
+      "__type__": "workflow.phase2a_steps:Phase2AMessage"
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 6,
+  "metadata": {},
+  "version": "1.0"
+}

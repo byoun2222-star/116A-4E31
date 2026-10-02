@@ -1,0 +1,50 @@
+{
+  "project_id": "maf-publishing-poc/phase2b",
+  "phase": "Phase 2B",
+  "subphase": "Identity-Preserving Codex Startup Test",
+  "current_status": "SAFE_STOP at STEP 2 (quoting-argv risk unverified) — awaiting owner decision",
+  "last_completed_step": "STEP 1 PRECONDITION BATCH CHECK: PASS",
+  "next_step": "Owner decision: fix --cmd argv transport (e.g. file-based, per submit_test_task_file precedent) or hold",
+  "blockers": [
+    "STEP2: cys.exe is a closed-source binary; cannot verify byte-for-byte preservation of multi-line protocol text (17 newlines, literal '<'/'>' chars) through its internal argv handling",
+    "worker-10 (chosen fresh test role) is not in PHASE2B_ALLOWED_TEST_ROLES — would require TARGET POLICY CONFIG CHANGE REQUIRED — OWNER APPROVAL if STEP2 is cleared"
+  ],
+  "authoritative_checkpoint": {
+    "path": "C:\\Users\\a\\.cys\\pack\\round\\WORKER_PHASE2B_CHECKPOINT_20260918.md",
+    "sha256": "d1efb51fb48ee46081692718c9c877dbd3b55a88b64255e1e7c86def4b240a78"
+  },
+  "protocol_versions": {
+    "V1": {
+      "source": "C:\\Users\\a\\.cys\\pack\\round\\evidence\\phase2b-bootstrap-submit\\token_protocol_message.txt",
+      "sha256": "987f45d3bea0648fd6c657c57d17e7c71e9065ac79e9ed675fb31608f43e4572",
+      "status": "CONFIRMED FROM LOCAL PRIMARY EVIDENCE"
+    }
+  },
+  "active_test_surfaces": [],
+  "protected_surfaces": [
+    "cso",
+    "master",
+    "worker",
+    "worker-2",
+    "worker-3"
+  ],
+  "allowed_test_roles": [
+    "worker-4",
+    "worker-5",
+    "worker-6",
+    "worker-8"
+  ],
+  "execution_counters": {
+    "normalization_runs_legacy_completed": 4,
+    "phase2b_run_record_total": 2,
+    "phase2b_run_record_completed": 1,
+    "phase2b_run_record_safe_stop": 0,
+    "evidence_ledger_entries": 6
+  },
+  "pending_approvals": [
+    "Identity-Preserving Startup Test STEP 3+ (surface creation) — not approved"
+  ],
+  "updated_at": "2026-10-02T03:43:14.639828+00:00",
+  "_generator": "phase2b/control/generate_project_state.py",
+  "_note": "This file is a DERIVED snapshot, not an independent source of truth. Authority order: evidence_ledger/phase2b_run_record > Publishing DB > .md checkpoint > conversation."
+}

@@ -1,0 +1,30 @@
+{
+  "T86EE44F7": {
+    "task_id": "phase2b-task-token-rehearsal-001",
+    "task_path": "phase2b\\tasks\\pending\\phase2b-task-token-rehearsal-001.json",
+    "result_path": "phase2b\\data\\results\\phase2b-task-token-rehearsal-001.json",
+    "task_sha256": "6d53b05cf4b652b9838166347a78d8601dcc08fe1402bf3f45bd025405d5fc5f",
+    "status": "PENDING"
+  },
+  "TFBAB618C": {
+    "task_id": "phase2b-task-e2e-worker6-001",
+    "task_path": "C:\\Users\\a\\install-jarvis\\maf-publishing-poc\\phase2b\\tasks\\pending\\phase2b-task-e2e-worker6-001.json",
+    "result_path": "C:\\Users\\a\\install-jarvis\\maf-publishing-poc\\phase2b\\data\\results\\phase2b-task-e2e-worker6-001.json",
+    "task_sha256": "de60354489a2d19c78e4119a2640c4b30439dc2c9879711a8efd7dd4d610a453",
+    "status": "COMPLETED"
+  },
+  "T93C9F4D7": {
+    "task_id": "phase2b-task-e2e-claude-worker4-001",
+    "task_path": "C:\\Users\\a\\install-jarvis\\maf-publishing-poc\\phase2b\\tasks\\pending\\phase2b-task-e2e-claude-worker4-001.json",
+    "result_path": "C:\\Users\\a\\install-jarvis\\maf-publishing-poc\\phase2b\\data\\results\\phase2b-task-e2e-claude-worker4-001.json",
+    "task_sha256": "3246ce758d564b7586f9dc59286ae97700fa07ab829f8bc5314c6df30340b96f",
+    "status": "COMPLETED"
+  },
+  "T2FB7F8DA": {
+    "task_id": "phase2b-task-e2e-gemini-worker8-001",
+    "task_path": "C:\\Users\\a\\install-jarvis\\maf-publishing-poc\\phase2b\\tasks\\pending\\phase2b-task-e2e-gemini-worker8-001.json",
+    "result_path": "C:\\Users\\a\\install-jarvis\\maf-publishing-poc\\phase2b\\data\\results\\phase2b-task-e2e-gemini-worker8-001.json",
+    "task_sha256": "ebaf430be90c3a4faecb15e0ed5dc0ed39ba4596797151a8f0664306718d0359",
+    "status": "COMPLETED"
+  }
+}

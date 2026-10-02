@@ -1,0 +1,35 @@
+{
+  "workflow_name": "maf-publishing-poc",
+  "graph_signature_hash": "1fcdb728cfe5bdac248094a07fb90b8cb3dbaaf69bf28d7912a20b9291a52dac",
+  "checkpoint_id": "21241819-06cc-431a-a8b8-474de11ee2f2",
+  "previous_checkpoint_id": "4b7ed16a-3f26-4cf9-b0fe-3dd2f16bd24d",
+  "timestamp": "2026-09-18T04:43:59.264576+00:00",
+  "messages": {
+    "internal:owner_approval": [
+      {
+        "__pickled__": "gAWVuAIAAAAAAACMKmFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ydW5uZXJfY29udGV4dJSMD1dvcmtmbG93TWVzc2FnZZSTlCmBlH2UKIwEZGF0YZSMD2V4ZWN1dG9ycy5zdGVwc5SMEEFwcHJvdmFsUmVzcG9uc2WUk5QpgZR9lCiMCGFwcHJvdmVklIiMC2FwcHJvdmVkX2J5lIwFb3duZXKUdWKMCXNvdXJjZV9pZJSMF2ludGVybmFsOm93bmVyX2FwcHJvdmFslIwJdGFyZ2V0X2lklIwOb3duZXJfYXBwcm92YWyUjAR0eXBllGgAjAtNZXNzYWdlVHlwZZSTlIwIcmVzcG9uc2WUhZRSlIwOdHJhY2VfY29udGV4dHOUTowPc291cmNlX3NwYW5faWRzlE6MG29yaWdpbmFsX3JlcXVlc3RfaW5mb19ldmVudJSMImFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ldmVudHOUjA1Xb3JrZmxvd0V2ZW50lJOUKYGUfZQoaBKMDHJlcXVlc3RfaW5mb5RoBWgGjA9BcHByb3ZhbFJlcXVlc3SUk5QpgZR9lCiMB2Jvb2tfaWSUjAxCT09LLVBPQy0wMDGUjAZhY3Rpb26UjA5PV05FUl9BUFBST1ZBTJR1YowGb3JpZ2lulGgbjBNXb3JrZmxvd0V2ZW50U291cmNllJOUjAhFWEVDVVRPUpSFlFKUjAVzdGF0ZZROjAdkZXRhaWxzlE6MC2V4ZWN1dG9yX2lklE6MC19yZXF1ZXN0X2lklIwVYXBwcm92YWwtQk9PSy1QT0MtMDAxlIwTX3NvdXJjZV9leGVjdXRvcl9pZJRoEYwNX3JlcXVlc3RfdHlwZZRoIowOX3Jlc3BvbnNlX3R5cGWUaAiMCWl0ZXJhdGlvbpROdWJ1Yi4=",
+        "__type__": "agent_framework._workflows._runner_context:WorkflowMessage"
+      }
+    ]
+  },
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "manuscript_received": {},
+      "editing": {},
+      "owner_approval": {},
+      "epub_build": {},
+      "epub_validate": {},
+      "review": {},
+      "ready_for_publication": {}
+    },
+    "pending_book_message": {
+      "__pickled__": "gAWVvQAAAAAAAACMD2V4ZWN1dG9ycy5zdGVwc5SMC0Jvb2tNZXNzYWdllJOUKYGUfZQojAdib29rX2lklIwMQk9PSy1QT0MtMDAxlIwFdGl0bGWUjBbthYzsiqTtirgg6rCA7IOB64+E7ISclIwHZmFpbF9hdJROjBVlZGl0aW5nX2RlbGF5X3NlY29uZHOURwAAAAAAAAAAjAV0cmFjZZRdlCiME01BTlVTQ1JJUFRfUkVDRUlWRUSUjAdFRElUSU5HlGV1Yi4=",
+      "__type__": "executors.steps:BookMessage"
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 3,
+  "metadata": {},
+  "version": "1.0"
+}

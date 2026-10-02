@@ -1,0 +1,1 @@
+{"title": "str", "subtitle": "str", "author": "str", "price_krw": "int", "language_code": "str", "status": "str"}

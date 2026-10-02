@@ -1,0 +1,5 @@
+surface:48	role=cso	pid=20044	exited=false	cso-claude · install-jarvis	C:\Users\a\install-jarvis
+surface:49	role=worker-3	pid=40604	exited=false	worker-3-codex · install-jarvis	C:\Users\a\install-jarvis
+surface:50	role=master	pid=33924	exited=false	master-claude · install-jarvis	C:\Users\a\install-jarvis
+surface:51	role=worker-2	pid=30352	exited=false	worker-2-claude · book-production	C:\Users\a\install-jarvis\book-production
+surface:52	role=worker	pid=48804	exited=false	worker-claude · install-jarvis	C:\Users\a\install-jarvis

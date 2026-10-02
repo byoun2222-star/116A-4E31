@@ -1,0 +1,34 @@
+{
+  "workflow_name": "maf-publishing-poc-phase2a",
+  "graph_signature_hash": "9a62fbafcc2898b5741854aea11f9168a362cbac0a5a378e83875501982433b2",
+  "checkpoint_id": "77765d9f-426f-4092-8ae2-a4da109a0cb0",
+  "previous_checkpoint_id": "105f3274-d402-4826-90e9-f71e3e925208",
+  "timestamp": "2026-09-18T05:00:42.779260+00:00",
+  "messages": {
+    "owner_approval_2a": [
+      {
+        "__pickled__": "gAWVLwIAAAAAAACMKmFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ydW5uZXJfY29udGV4dJSMD1dvcmtmbG93TWVzc2FnZZSTlCmBlH2UKIwEZGF0YZSMFndvcmtmbG93LnBoYXNlMmFfc3RlcHOUjA5QaGFzZTJBTWVzc2FnZZSTlCmBlH2UKIwHYm9va19pZJSMDEJPT0stUE9DLTAwMpSMBXRpdGxllIwQVEVTVCAyQS1JIOuPhOyEnJSMD3dvcmtmbG93X3J1bl9pZJSMEHJ1bi1CT09LLVBPQy0wMDKUjBRtb2NrX3Byb3ZpZGVyX2hlYWx0aJROjBFyZXF1aXJlc19wYWlkX2FwaZSJjAV0cmFjZZRdlCiMDlNZTkNfQ1lTX1NUQVRFlIwSUkVHSVNURVJfUFJPVklERVJTlIwWUk9VVEVSX0RFQ0lTSU9OPUNMQVVERZSMEUNPU1RfR1VBUkRfUEFTU0VElIwOT1dORVJfQVBQUk9WQUyUZYwPcm91dGVyX2RlY2lzaW9ulIwGQ0xBVURFlHVijAlzb3VyY2VfaWSUjBFvd25lcl9hcHByb3ZhbF8yYZSMCXRhcmdldF9pZJROjAR0eXBllGgAjAtNZXNzYWdlVHlwZZSTlIwIc3RhbmRhcmSUhZRSlIwOdHJhY2VfY29udGV4dHOUTowPc291cmNlX3NwYW5faWRzlE6MG29yaWdpbmFsX3JlcXVlc3RfaW5mb19ldmVudJROdWIu",
+        "__type__": "agent_framework._workflows._runner_context:WorkflowMessage"
+      }
+    ]
+  },
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "sync_cys_state": {},
+      "register_providers": {},
+      "router_decision": {},
+      "cost_guard": {},
+      "owner_approval_2a": {},
+      "finalize": {}
+    },
+    "pending_message": {
+      "__pickled__": "gAWVNQEAAAAAAACMFndvcmtmbG93LnBoYXNlMmFfc3RlcHOUjA5QaGFzZTJBTWVzc2FnZZSTlCmBlH2UKIwHYm9va19pZJSMDEJPT0stUE9DLTAwMpSMBXRpdGxllIwQVEVTVCAyQS1JIOuPhOyEnJSMD3dvcmtmbG93X3J1bl9pZJSMEHJ1bi1CT09LLVBPQy0wMDKUjBRtb2NrX3Byb3ZpZGVyX2hlYWx0aJROjBFyZXF1aXJlc19wYWlkX2FwaZSJjAV0cmFjZZRdlCiMDlNZTkNfQ1lTX1NUQVRFlIwSUkVHSVNURVJfUFJPVklERVJTlIwWUk9VVEVSX0RFQ0lTSU9OPUNMQVVERZSMEUNPU1RfR1VBUkRfUEFTU0VElGWMD3JvdXRlcl9kZWNpc2lvbpSMBkNMQVVERZR1Yi4=",
+      "__type__": "workflow.phase2a_steps:Phase2AMessage"
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 7,
+  "metadata": {},
+  "version": "1.0"
+}

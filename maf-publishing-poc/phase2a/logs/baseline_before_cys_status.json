@@ -1,0 +1,448 @@
+{
+  "back_pressure": {
+    "publishers": [],
+    "threshold": 25
+  },
+  "boot_v2_enabled": false,
+  "daemon": {
+    "build_id": "03bee2236642.20260916T0100Z",
+    "embedded_pack_hash": "8c5ef33a28031b9ecd403bd71c9a5de04ba5f2caabecd9774c50ae14172b66b2",
+    "latest_seq": 36981,
+    "npm_prefix_polluted": false,
+    "parser_panics": 33,
+    "protocol_version": "1",
+    "started_at": 1789632428.6837783,
+    "version": "1.0.1"
+  },
+  "feed": {
+    "oldest_pending_age_secs": null,
+    "pending": 0
+  },
+  "health_recent": [
+    {
+      "discourse": null,
+      "line": " continued ·continuin                uomatically at 8:30am · the automatc-continueseting no ongerends this wait (esc or /‹health-rule›-options still           can)                        ⎿  You've hit",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687898.3323174
+    },
+    {
+      "discourse": null,
+      "line": " reched again after you                 continued· ing                automatcally at 8:30am · the              automatic-continueseting no longer         ends this wait            (escor /‹health-rul",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687897.0038538
+    },
+    {
+      "discourse": null,
+      "line": " afteryou                 continued ·               continuing automatically at 8:30am · the -continuesetting no longerends ths wai            (sc or/‹health-rule›-optionstll can)                     ",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687896.9711246
+    },
+    {
+      "discourse": null,
+      "line": " continung                automaticallyat 8:30am · the automatic-continuesetg olongerends ths wait            (esc or /‹health-rule›-options still           can)                        ⎿  You've hit y",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687889.641569
+    },
+    {
+      "discourse": null,
+      "line": " continued ·continuin                uomatically at 8:30am · the automatc-continueseting no ongerends this wait (esc or /‹health-rule›-options still           can)                        ⎿  You've hit",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687885.676492
+    },
+    {
+      "discourse": null,
+      "line": " afteryou                 continued ·               continuing automatically at 8:30am · the -continuesetting no longerends ths wai            (sc or/‹health-rule›-optionstll can)                     ",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687884.428878
+    },
+    {
+      "discourse": null,
+      "line": " reched again after you                 continued· ing                automatcally at 8:30am · the              automatic-continueseting no longer         ends this wait            (escor /‹health-rul",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687877.089115
+    },
+    {
+      "discourse": null,
+      "line": " continued ·continuin                uomatically at 8:30am · the automatc-continueseting no ongerends this wait (esc or /‹health-rule›-options still           can)                        ⎿  You've hit",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687876.6255634
+    },
+    {
+      "discourse": null,
+      "line": " reched again after you                 continued· ing                automatcally at 8:30am · the              automatic-continueseting no longer         ends this wait            (escor /‹health-rul",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687875.1064513
+    },
+    {
+      "discourse": null,
+      "line": " afteryou                 continued ·               continuing automatically at 8:30am · the -continuesetting no longerends ths wai            (sc or/‹health-rule›-optionstll can)                     ",
+      "rule": "rate_limited",
+      "surface_id": 48,
+      "ts": 1789687875.015335
+    }
+  ],
+  "health_suppressed": {
+    "by_rule": [
+      {
+        "count": 5,
+        "reason": "narration-prose",
+        "rule": "rate_limited"
+      }
+    ],
+    "total": 5
+  },
+  "pause_info": null,
+  "paused": false,
+  "surfaces": [
+    {
+      "ack_nonce_ok": false,
+      "ack_source": null,
+      "agent": "claude",
+      "agent_alive": true,
+      "alt_screen": false,
+      "awakened_at": null,
+      "boot_nonce_generation": null,
+      "created_at": 1789632431.3342493,
+      "cwd": "C:\\Users\\a\\install-jarvis",
+      "directive_verified": false,
+      "exited": false,
+      "gate_pending": null,
+      "idle_secs": 1066,
+      "last_parser_panic": 1789652557.1169348,
+      "line_count": 4403,
+      "live_cwd": "C:\\Users\\a\\install-jarvis\\",
+      "parser_panics": 9,
+      "queue_depth": 0,
+      "queue_paused": false,
+      "role": "cso",
+      "seat": "occupied",
+      "status": null,
+      "surface_id": 48,
+      "surface_ref": "surface:48",
+      "title": "cso-claude · install-jarvis",
+      "usage": {
+        "agent": "claude",
+        "ctx_pct": 53,
+        "ctx_tokens": 528432,
+        "ctx_window": 1000000,
+        "rate": [
+          {
+            "label": "5h",
+            "resets_at": 1789723800.0,
+            "used_pct": 5.0
+          },
+          {
+            "label": "7d",
+            "resets_at": 1790179200.0,
+            "used_pct": 68.0
+          }
+        ],
+        "session_file": "C:\\Users\\a\\.cys\\claude\\projects\\C--Users-a-install-jarvis\\d73df81b-f919-4c14-842b-bab841f9a199.jsonl",
+        "source": "statusline",
+        "updated_at": 1789706040.1985493
+      }
+    },
+    {
+      "ack_nonce_ok": false,
+      "ack_source": null,
+      "agent": "codex",
+      "agent_alive": true,
+      "alt_screen": false,
+      "awakened_at": null,
+      "boot_nonce_generation": null,
+      "created_at": 1789632432.7777898,
+      "cwd": "C:\\Users\\a\\install-jarvis",
+      "directive_verified": false,
+      "exited": false,
+      "gate_pending": null,
+      "idle_secs": 1394,
+      "last_parser_panic": 1789652557.1426687,
+      "line_count": 189675,
+      "live_cwd": "C:\\Users\\a\\install-jarvis\\",
+      "parser_panics": 10,
+      "queue_depth": 0,
+      "queue_paused": false,
+      "role": "worker-3",
+      "seat": "occupied",
+      "status": null,
+      "surface_id": 49,
+      "surface_ref": "surface:49",
+      "title": "worker-3-codex · install-jarvis",
+      "usage": {
+        "agent": "codex",
+        "ctx_pct": null,
+        "ctx_tokens": null,
+        "ctx_window": null,
+        "rate": [
+          {
+            "label": "5h",
+            "resets_at": 1789634753.0,
+            "used_pct": 3.0
+          },
+          {
+            "label": "7d",
+            "resets_at": 1789810016.0,
+            "used_pct": 16.0
+          }
+        ],
+        "session_file": "C:\\Users\\a\\.codex\\sessions\\2026\\09\\17\\rollout-2026-09-17T07-32-17-01a0ac59-6f30-79b2-ae52-8f1b08c36489.jsonl",
+        "source": "rollout:heuristic:stale",
+        "updated_at": 1789632586.497697
+      }
+    },
+    {
+      "ack_nonce_ok": false,
+      "ack_source": null,
+      "agent": "claude",
+      "agent_alive": true,
+      "alt_screen": false,
+      "awakened_at": null,
+      "boot_nonce_generation": null,
+      "created_at": 1789632452.5732236,
+      "cwd": "C:\\Users\\a\\install-jarvis",
+      "directive_verified": false,
+      "exited": false,
+      "gate_pending": null,
+      "idle_secs": 15,
+      "last_parser_panic": 1789652557.144194,
+      "line_count": 7597,
+      "live_cwd": "C:\\Users\\a\\install-jarvis\\",
+      "parser_panics": 7,
+      "queue_depth": 0,
+      "queue_paused": false,
+      "role": "master",
+      "seat": "occupied",
+      "status": null,
+      "surface_id": 50,
+      "surface_ref": "surface:50",
+      "title": "master-claude · install-jarvis",
+      "usage": {
+        "agent": "claude",
+        "ctx_pct": 81,
+        "ctx_tokens": 806573,
+        "ctx_window": 1000000,
+        "rate": [
+          {
+            "label": "5h",
+            "resets_at": 1789723800.0,
+            "used_pct": 19.0
+          },
+          {
+            "label": "7d",
+            "resets_at": 1790179200.0,
+            "used_pct": 70.0
+          }
+        ],
+        "session_file": "C:\\Users\\a\\.cys\\claude\\projects\\C--Users-a-install-jarvis\\346f418d-a23b-4ac8-b541-cf70f5e97206.jsonl",
+        "source": "statusline",
+        "updated_at": 1789707089.7354834
+      }
+    },
+    {
+      "ack_nonce_ok": false,
+      "ack_source": null,
+      "agent": "claude",
+      "agent_alive": true,
+      "alt_screen": false,
+      "awakened_at": 1789632758.8500278,
+      "boot_nonce_generation": null,
+      "created_at": 1789632471.6102002,
+      "cwd": "C:\\Users\\a\\install-jarvis\\book-production",
+      "directive_verified": false,
+      "exited": false,
+      "gate_pending": null,
+      "idle_secs": 2492,
+      "last_parser_panic": 1789652557.153819,
+      "line_count": 12717,
+      "live_cwd": "C:\\Users\\a\\install-jarvis\\book-production\\",
+      "parser_panics": 4,
+      "queue_depth": 0,
+      "queue_paused": false,
+      "role": "worker-2",
+      "seat": "occupied",
+      "status": {
+        "age_secs": 74350,
+        "context_pct": 45,
+        "state": "waiting",
+        "task": "잠언1권 EPUB 항목4/7 후처리+Calibre polish 완료, 검증결과 정리 중 RESTORE 신호로 중단 — master 지시 대기"
+      },
+      "surface_id": 51,
+      "surface_ref": "surface:51",
+      "title": "worker-2-claude · book-production",
+      "usage": {
+        "agent": "claude",
+        "ctx_pct": 57,
+        "ctx_tokens": 570242,
+        "ctx_window": 1000000,
+        "rate": [
+          {
+            "label": "7d",
+            "resets_at": 1790179200.0,
+            "used_pct": 65.0
+          }
+        ],
+        "session_file": "C:\\Users\\a\\.cys\\claude\\projects\\C--Users-a-install-jarvis-book-production\\e31dbe39-9b11-4138-9885-8ff6ff83e636.jsonl",
+        "source": "statusline",
+        "updated_at": 1789705802.093996
+      }
+    },
+    {
+      "ack_nonce_ok": false,
+      "ack_source": null,
+      "agent": "claude",
+      "agent_alive": true,
+      "alt_screen": false,
+      "awakened_at": 1789632738.0091038,
+      "boot_nonce_generation": null,
+      "created_at": 1789632491.6034043,
+      "cwd": "C:\\Users\\a\\install-jarvis",
+      "directive_verified": false,
+      "exited": false,
+      "gate_pending": null,
+      "idle_secs": 0,
+      "last_parser_panic": 1789652557.163881,
+      "line_count": 7649,
+      "live_cwd": "C:\\Users\\a\\install-jarvis\\",
+      "parser_panics": 3,
+      "queue_depth": 0,
+      "queue_paused": false,
+      "role": "worker",
+      "seat": "occupied",
+      "status": {
+        "age_secs": 12,
+        "context_pct": 20,
+        "state": "working",
+        "task": "MAF-PUBLISHING-POC Phase 2A 착수 — baseline 확보 및 실제 read-only 명령 조사"
+      },
+      "surface_id": 52,
+      "surface_ref": "surface:52",
+      "title": "worker-claude · install-jarvis",
+      "usage": {
+        "agent": "claude",
+        "ctx_pct": 88,
+        "ctx_tokens": 875922,
+        "ctx_window": 1000000,
+        "rate": [
+          {
+            "label": "5h",
+            "resets_at": 1789723800.0,
+            "used_pct": 19.0
+          },
+          {
+            "label": "7d",
+            "resets_at": 1790179200.0,
+            "used_pct": 70.0
+          }
+        ],
+        "session_file": "C:\\Users\\a\\.cys\\claude\\projects\\C--Users-a-install-jarvis\\346f418d-a23b-4ac8-b541-cf70f5e97206.jsonl",
+        "source": "statusline",
+        "updated_at": 1789707108.1859145
+      }
+    }
+  ],
+  "todo": {
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\CSO_TODO.md": {
+      "age_secs": 54085,
+      "done": 0,
+      "total": 1,
+      "verdict": "unclaimed"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\FILL-MISSING-INFO_TODO.md": {
+      "age_secs": 66412,
+      "done": 22,
+      "owner": "worker",
+      "total": 22,
+      "verdict": "counted"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\MAF-PUBLISHING-POC_TODO.md": {
+      "age_secs": 523,
+      "done": 20,
+      "owner": "worker",
+      "total": 21,
+      "verdict": "counted"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\MASTER_TODO.md": {
+      "age_secs": 72173,
+      "done": 5,
+      "total": 8,
+      "verdict": "unclaimed"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\NEW-SERMON-DISCOVERY_TODO.md": {
+      "age_secs": 18968,
+      "done": 11,
+      "owner": "worker",
+      "total": 11,
+      "verdict": "counted"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\REVIEWER_CLAUDE_2_TODO.md": {
+      "age_secs": 279203,
+      "done": 0,
+      "owner": "reviewer-claude-2",
+      "total": 0,
+      "verdict": "counted"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\REVIEWER_CODEX_TODO.md": {
+      "age_secs": 193174,
+      "done": 4,
+      "total": 4,
+      "verdict": "unclaimed"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\REVIEWER_GEMINI_TODO.md": {
+      "age_secs": 199626,
+      "done": 5,
+      "owner": "reviewer-gemini",
+      "total": 5,
+      "verdict": "counted"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\REVIEWER_TODO.md": {
+      "age_secs": 433253,
+      "done": 0,
+      "total": 1,
+      "verdict": "unclaimed"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\SERMON-RECLASSIFY_TODO.md": {
+      "age_secs": 143142,
+      "done": 15,
+      "owner": "worker",
+      "total": 16,
+      "verdict": "counted"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\VERSE-COMPLETION-RECHECK_TODO.md": {
+      "age_secs": 23609,
+      "done": 25,
+      "owner": "worker",
+      "total": 25,
+      "verdict": "counted"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\WORKER_2_TODO.md": {
+      "age_secs": 3043,
+      "done": 56,
+      "owner": "worker-2",
+      "total": 64,
+      "verdict": "counted"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\WORKER_3_TODO.md": {
+      "age_secs": 74695,
+      "done": 0,
+      "owner": "worker-3",
+      "total": 0,
+      "verdict": "counted"
+    },
+    "\\\\?\\C:\\Users\\a\\.cys\\pack\\round\\WORKER_TODO.md": {
+      "age_secs": 160112,
+      "done": 9,
+      "owner": "worker-2",
+      "total": 9,
+      "verdict": "counted"
+    }
+  }
+}

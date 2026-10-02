@@ -1,0 +1,35 @@
+{
+  "task_id": "phase2b-task-e2e-gemini-worker8-001",
+  "workflow_run_id": "wf-e2e-gemini-worker8-001",
+  "book_id": "BOOK-POC-002",
+  "task_type": "METADATA_NORMALIZATION",
+  "objective": "Read the INPUT metadata JSON for a virtual test book and return ONLY a JSON object normalized to the OUTPUT_SCHEMA below. Do not add, invent, or omit any information. Do not add commentary, markdown fences, or any text other than the JSON object itself.",
+  "input": {
+    "title": "스펄전의 시편 묵상 (PoC 가상도서)",
+    "subtitle": "PHASE 2B 시험용 가상 메타데이터 — 실제 출판물 아님",
+    "author": "Charles H. Spurgeon (PoC placeholder)",
+    "price": "18000",
+    "language": "ko",
+    "publication_status": "draft"
+  },
+  "output_schema": {
+    "title": "str",
+    "subtitle": "str",
+    "author": "str",
+    "price_krw": "int",
+    "language_code": "str",
+    "status": "str"
+  },
+  "constraints": [
+    "Output must be a single valid JSON object, nothing else (no prose, no code fences).",
+    "price (string) must become price_krw (integer), stripping any non-digit characters.",
+    "language must be renamed to language_code, value unchanged.",
+    "publication_status must be renamed to status, value unchanged.",
+    "title/subtitle/author must be copied verbatim, unchanged.",
+    "Do not include the old field names (price/language/publication_status) in the output.",
+    "Do not fabricate any field not derivable from the input (no isbn, no notes, no comment)."
+  ],
+  "validation_rules": "see phase2b/tasks/test_task.py:validate_output() — deterministic, not AI-graded",
+  "relevant_file_paths": [],
+  "owner_instruction_reference": "PHASE2B §9-10, task packet §17"
+}

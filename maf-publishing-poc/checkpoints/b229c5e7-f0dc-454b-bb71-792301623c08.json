@@ -1,0 +1,28 @@
+{
+  "workflow_name": "maf-publishing-poc",
+  "graph_signature_hash": "1fcdb728cfe5bdac248094a07fb90b8cb3dbaaf69bf28d7912a20b9291a52dac",
+  "checkpoint_id": "b229c5e7-f0dc-454b-bb71-792301623c08",
+  "previous_checkpoint_id": "afbfbd67-e2fe-440d-9aa3-c81a32cb8d21",
+  "timestamp": "2026-09-18T04:43:59.690429+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "manuscript_received": {},
+      "editing": {},
+      "owner_approval": {},
+      "epub_build": {},
+      "epub_validate": {},
+      "review": {},
+      "ready_for_publication": {}
+    },
+    "pending_book_message": {
+      "__pickled__": "gAWVvQAAAAAAAACMD2V4ZWN1dG9ycy5zdGVwc5SMC0Jvb2tNZXNzYWdllJOUKYGUfZQojAdib29rX2lklIwMQk9PSy1QT0MtMDAxlIwFdGl0bGWUjBbthYzsiqTtirgg6rCA7IOB64+E7ISclIwHZmFpbF9hdJROjBVlZGl0aW5nX2RlbGF5X3NlY29uZHOURwAAAAAAAAAAjAV0cmFjZZRdlCiME01BTlVTQ1JJUFRfUkVDRUlWRUSUjAdFRElUSU5HlGV1Yi4=",
+      "__type__": "executors.steps:BookMessage"
+    }
+  },
+  "pending_request_info_events": {},
+  "iteration_count": 8,
+  "metadata": {},
+  "version": "1.0"
+}

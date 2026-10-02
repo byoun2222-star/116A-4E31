@@ -1,0 +1,33 @@
+{
+  "workflow_name": "maf-publishing-poc",
+  "graph_signature_hash": "1fcdb728cfe5bdac248094a07fb90b8cb3dbaaf69bf28d7912a20b9291a52dac",
+  "checkpoint_id": "4b7ed16a-3f26-4cf9-b0fe-3dd2f16bd24d",
+  "previous_checkpoint_id": "9a766fdc-6aac-4916-9dd2-46282c7438f4",
+  "timestamp": "2026-09-18T04:43:58.280054+00:00",
+  "messages": {},
+  "state": {
+    "_workflow_run_kwargs": {},
+    "_executor_state": {
+      "manuscript_received": {},
+      "editing": {},
+      "owner_approval": {},
+      "epub_build": {},
+      "epub_validate": {},
+      "review": {},
+      "ready_for_publication": {}
+    },
+    "pending_book_message": {
+      "__pickled__": "gAWVvQAAAAAAAACMD2V4ZWN1dG9ycy5zdGVwc5SMC0Jvb2tNZXNzYWdllJOUKYGUfZQojAdib29rX2lklIwMQk9PSy1QT0MtMDAxlIwFdGl0bGWUjBbthYzsiqTtirgg6rCA7IOB64+E7ISclIwHZmFpbF9hdJROjBVlZGl0aW5nX2RlbGF5X3NlY29uZHOURwAAAAAAAAAAjAV0cmFjZZRdlCiME01BTlVTQ1JJUFRfUkVDRUlWRUSUjAdFRElUSU5HlGV1Yi4=",
+      "__type__": "executors.steps:BookMessage"
+    }
+  },
+  "pending_request_info_events": {
+    "approval-BOOK-POC-001": {
+      "__pickled__": "gAWVpwEAAAAAAACMImFnZW50X2ZyYW1ld29yay5fd29ya2Zsb3dzLl9ldmVudHOUjA1Xb3JrZmxvd0V2ZW50lJOUKYGUfZQojAR0eXBllIwMcmVxdWVzdF9pbmZvlIwEZGF0YZSMD2V4ZWN1dG9ycy5zdGVwc5SMD0FwcHJvdmFsUmVxdWVzdJSTlCmBlH2UKIwHYm9va19pZJSMDEJPT0stUE9DLTAwMZSMBmFjdGlvbpSMDk9XTkVSX0FQUFJPVkFMlHVijAZvcmlnaW6UaACME1dvcmtmbG93RXZlbnRTb3VyY2WUk5SMCEVYRUNVVE9SlIWUUpSMBXN0YXRllE6MB2RldGFpbHOUTowLZXhlY3V0b3JfaWSUTowLX3JlcXVlc3RfaWSUjBVhcHByb3ZhbC1CT09LLVBPQy0wMDGUjBNfc291cmNlX2V4ZWN1dG9yX2lklIwOb3duZXJfYXBwcm92YWyUjA1fcmVxdWVzdF90eXBllGgKjA5fcmVzcG9uc2VfdHlwZZRoCIwQQXBwcm92YWxSZXNwb25zZZSTlIwJaXRlcmF0aW9ulE51Yi4=",
+      "__type__": "agent_framework._workflows._events:WorkflowEvent"
+    }
+  },
+  "iteration_count": 3,
+  "metadata": {},
+  "version": "1.0"
+}

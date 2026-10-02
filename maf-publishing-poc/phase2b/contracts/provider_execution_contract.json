@@ -1,0 +1,92 @@
+{
+  "contract_version": "PHASE2B-PROVIDER-CONTRACT-V1",
+  "description": "Provider-neutral execution contract for Phase 2B, extracted read-only from the already-verified Codex success path (run2b-98c6b20ac93d4003 startup, run2b-d7f7a04578394cc7 short-token E2E). This contract does not change any existing implementation.",
+  "derived_from_authoritative_runs": [
+    "run2b-98c6b20ac93d4003",
+    "run2b-d7f7a04578394cc7"
+  ],
+  "task_envelope": {
+    "required_fields": [
+      "task_id",
+      "workflow_run_id",
+      "book_id",
+      "task_type",
+      "objective",
+      "input",
+      "output_schema",
+      "constraints",
+      "validation_rules",
+      "relevant_file_paths",
+      "owner_instruction_reference"
+    ],
+    "provider_field_is_mandatory_in_envelope": false,
+    "source": "phase2b/tasks/test_task.py:build_task_packet (unchanged)"
+  },
+  "control_contract": {
+    "terminal_control_payload": "RUN <TOKEN>",
+    "token_is_not_task_body": true,
+    "token_format": "T + SHA256(task_id)[:8].upper() (9 ASCII chars)",
+    "mapping_chain": "TOKEN -> manifest[TOKEN] -> {task_id, task_path, result_path, task_sha256, status}",
+    "mapping_must_be_deterministic": true,
+    "source": "phase2b/control/token_manifest.py (unchanged)"
+  },
+  "data_contract": {
+    "canonical_format": "UTF-8 JSON file",
+    "screen_or_pty_content_is_canonical": false,
+    "atomic_write_required": true,
+    "atomic_write_mechanism": ".tmp suffix, then os.replace()/MoveFileEx same-volume rename",
+    "source": "phase2b/tasks/test_task.py:write_task_file, phase2b/controlled_adapter/controlled_cys_adapter.py:collect_test_result_file (both unchanged)"
+  },
+  "result_contract": {
+    "provider_writes_only": "the result JSON object, to the exact assigned result_path",
+    "atomic_final_required": true,
+    "human_reconstruction_forbidden": true,
+    "canonical_screen_scraping_forbidden_for_result_capture": true
+  },
+  "validation_contract": {
+    "pipeline_order": [
+      "utf8_decode",
+      "json_parse",
+      "schema_check",
+      "task_specific_validator",
+      "sha256"
+    ],
+    "ai_self_grading_forbidden": true,
+    "source": "phase2b/tasks/test_task.py:validate_output / validate_output_file (unchanged)"
+  },
+  "completion_contract": {
+    "requires_all_of": [
+      "valid_final_result_file_present",
+      "validator_passed",
+      "db_recorded_hash_equals_file_hash"
+    ],
+    "provider_response_text_alone_is_insufficient": true
+  },
+  "retry_contract": {
+    "max_automatic_retry": 0,
+    "retry_is_distinct_from_recovery_input_action": true
+  },
+  "idempotency_contract": {
+    "skip_resubmission_if_valid_completed_result_exists": true,
+    "conflict_state_name": "IDEMPOTENCY_CONFLICT",
+    "canonical_check_source": "phase2b/collector/result_collector.py:already_ran (idempotency_key column, unchanged)"
+  },
+  "provider_identifiers": ["CLAUDE", "CODEX", "GEMINI"],
+  "provider_neutral_source_files": [
+    "phase2b/control/token_manifest.py",
+    "phase2b/tasks/test_task.py",
+    "phase2b/collector/result_collector.py",
+    "phase2b/workflow/run_baseline.py",
+    "phase2b/controlled_adapter/controlled_cys_adapter.py (check_target_policy, collect_test_result_file, PROVIDER_TO_AGENT, PHASE2B_ALLOWED_TEST_ROLES, PRODUCTION_ROLES)"
+  ],
+  "provider_specific_fields_excluded_from_mandatory_envelope": [
+    "node.exe absolute path",
+    "codex.js absolute path",
+    "--no-daemon flag",
+    "model name (e.g. gpt-6-sol)",
+    "Codex TUI keybinding/vim-mode behavior",
+    "Codex-specific ready/ACK delivery mechanism (startup argv injection)",
+    "controlled_cys_adapter.py:_codex_submission_exists / CODEX_LOCAL_LOG_PATH (CODEX-only by design)"
+  ],
+  "note": "The ACK TEXT itself (\"SHORT TOKEN PROTOCOL: UNDERSTOOD\" / \"RUN TOKEN EXECUTED: NO\") and the Protocol V1 instruction body are PROVIDER-NEUTRAL (any provider capable of reading files and following instructions could in principle satisfy them); only the DELIVERY MECHANISM to Codex specifically (node.exe+codex.js+--no-daemon+argv) is Codex-specific."
+}
